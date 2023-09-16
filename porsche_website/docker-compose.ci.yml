@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  backend:
+    image: "porsche_website-backend:latest"
+
+  frontend:
+    image: "porsche_website-frontend:latest"
