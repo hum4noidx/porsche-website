@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@font-face {
+    font-family: Porsche Next;
+    src: url(../src/assets/porsche-next-bold.otf) format("otf"),
+    url(../src/assets/PorscheNext-Regular.otf) format("otf"),
+    url(../src/assets/porsche-next-italic.otf) format("otf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 .App {
     text-align: center;
 }
@@ -21,59 +32,65 @@
     grid-template-areas: "left center right";
     width: 100%;
 }
-.Header-menu{
+.Header-menu {
     float: left;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 8px;
+    margin-top: 8px;
     width: 24px;
     height: 24px;
     filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
 }
 
-
 .Header-logo {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
-    height: inherit;
-
+    margin-top: 14px;
+    max-width: 240px;
+    max-height: 16px;
 }
-.Container{
+
+.Header-search {
+    float: right;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 8px;
+    width: 24px;
+    height: 24px;
+    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+}
+
+.Container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.Main-text{
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #fff;
+.Main-text {
+    width: 600px;
+    height: 500px;
+    padding: 11em 0 0 5em;
 }
-.Main-text-title{
-    font-size: 134px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.Main-text-subtitle{
-    font-size: 30px;
+.Main-text-title {
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: 33px;
+    margin-left: 105px;
+    font-size: 4.7em;
+    font-style: normal;
     font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #fff;
+    line-height: 150%; /* 180.027px */
+    font-family: "Porsche Next", sans-serif;
 }
-.Main-text-link{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #fff;
+
+.img-718 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
+
 .Section-main {
-    height: 100vh;
+    height: 110vh;
     background-image: url(../src/assets/taycan-main.png);
     background-size: cover;
     background-position: center;
