@@ -8,6 +8,17 @@ import porsche_panamera from './assets/porsche-panamera.png'
 import porsche_macan from './assets/porsche-macan.png'
 import porsche_cayenne from './assets/porsche-cayenne.png'
 import './App.css';
+import ModelCategoryList from './components/ModelCardList'
+
+let modelCategories = [
+    {url: 'models/porsche_718', img: porsche_718, slug: 'porsche_718'},
+    {url: 'models/porsche_911', img: porsche_911, slug: 'porsche_911'},
+    {url: 'models/porsche_taycan', img: porsche_taycan, slug: 'porsche_taycan'},
+    {url: 'models/porsche_panamera', img: porsche_panamera, slug: 'porsche_panamera'},
+    {url: 'models/porsche_macan', img: porsche_macan, slug: 'porsche_macan'},
+    {url: 'models/porsche_cayenne', img: porsche_cayenne, slug: 'porsche_cayenne'},
+
+]
 
 function App() {
     return (
@@ -42,31 +53,9 @@ function App() {
             <section className="Models">
                 <div className="Container">
                     <header className="Models-header">
-                        <div className="model-categories">
-                            <a href="#">
-                                <img src={porsche_718} alt="img-718" className="porsche-718"/>
-                            </a>
-
-                            <a href="#">
-                                <img src={porsche_911} alt="img-911" className="porsche-911"/>
-                            </a>
-
-                            <a href="#">
-                                <img src={porsche_taycan} alt="img-taycan" className="porsche-taycan"/>
-                            </a>
-
-                            <a href="#">
-                                <img src={porsche_panamera} alt="img-panamera" className="porsche-panamera"/>
-                            </a>
-
-                            <a href="#">
-                                <img src={porsche_macan} alt="img-macan" className="porsche-macan"/>
-                            </a>
-
-                            <a href="#">
-                                <img src={porsche_cayenne} alt="img-cayenne" className="porsche-cayenne"/>
-                            </a>
-                        </div>
+                        <ModelCategoryList
+                            modelCategories={modelCategories}
+                        />
                     </header>
                 </div>
             </section>
