@@ -29,19 +29,14 @@ function App() {
     };
     return (
         <div className="App">
-                <button onClick={toggleSidebar} className="p-4">
-                    Toggle Sidebar
-                </button>
                 <Sidebar isOpen={isSidebarOpen} modelCategories={modelCategories}/>
 
                 <section className="Section-main">
                     <div className="Container">
                         <header className="Header">
-                            <div className="Header-Menu">
-                                <a href="#">
+                                <button onClick={toggleSidebar}>
                                     <img src={menu} alt="menu-button" className="Header-menu"/>
-                                </a>
-                            </div>
+                                </button>
 
                             <a href="#">
                                 <img src={porsche_logo} alt="porshe-logo" className="Header-logo"/>
