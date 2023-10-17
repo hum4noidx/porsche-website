@@ -1,7 +1,7 @@
 import Sidebar from "../components/SideBar";
-import menu from "../assets/menu.svg";
-import porsche_logo from "../assets/porsche-logo.svg";
-import search from "../assets/search.svg";
+import menu from "../assets/menu-white.svg";
+import porsche_logo from "../assets/porsche-logo-white.svg";
+import search from "../assets/search-white.svg";
 import React, {useState} from "react";
 import porsche_718 from "../assets/porsche-718.png";
 import porsche_911 from "../assets/porsche-911.png";
@@ -24,24 +24,17 @@ let modelCategories = [
 const MainPage = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-    const toggleSidebar = () => {
-        setSidebarOpen(!isSidebarOpen);
-    };
     return (
         <>
-            <Sidebar isOpen={isSidebarOpen} modelCategories={modelCategories}/>
+            <Sidebar isOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} modelCategories={modelCategories}/>
 
             <section className="Section-main">
                 <div className="Container">
                     <header className="Header">
-                        <button onClick={toggleSidebar}>
-                            <img src={menu} alt="menu-button" className="Header-menu"/>
-                        </button>
-
+                        <img onClick={() => setSidebarOpen(!isSidebarOpen)} src={menu} alt="close" className="Header-menu"/>
                         <a href="#">
                             <img src={porsche_logo} alt="porshe-logo" className="Header-logo"/>
                         </a>
-
                         <a href="#">
                             <img src={search} alt="search-button" className="Header-search"/>
                         </a>
