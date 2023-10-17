@@ -1,8 +1,5 @@
 import React from 'react';
 import ModelCategoryList from "./ModelCardList";
-import toggleSidebar from '../App.js'
-import menu from "../assets/menu.svg";
-
 function Sidebar({isOpen, modelCategories}) {
     return (
         <div>
