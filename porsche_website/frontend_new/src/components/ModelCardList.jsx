@@ -1,8 +1,8 @@
 import {Link, Outlet} from "react-router-dom";
 
-const ModelCategoryList = ({modelCategories}) => {
+const ModelCategoryList = ({modelCategories, toggleSidebar}) => {
     const listModelCategories = modelCategories.map(category =>
-        <Link to={`/models/${category.slug}`} className="category_car">
+        <Link to={`/models/${category.slug}`} className="category_car" onClick={toggleSidebar} >
             <img src={category.img} alt={category.slug} className="category_car"/>
         </Link>
     );

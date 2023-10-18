@@ -47,7 +47,7 @@ function Sidebar({isOpen, toggleSidebar}) {
             <div id="mySidenav" ref={sideBarRef}
                  className={`sidenav fixed inset-y-0 left-0 z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} w-64 bg-gray-800 p-8`}>
                 <ModelCategoryList
-                    modelCategories={modelCategories}
+                    modelCategories={modelCategories} toggleSidebar={toggleSidebar}
                 />
                 <a href="javascript:void(0)" className="close-btn" onClick={() => navInteract(false)}>&times;</a>
 
