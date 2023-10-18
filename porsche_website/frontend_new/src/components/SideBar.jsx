@@ -26,7 +26,7 @@ let modelCategories2 = {
     "porsche_cayenne": {url: 'models/porsche_cayenne', img: porsche_cayenne, slug: 'porsche_cayenne'},
 };
 
-function Sidebar({isOpen, toggleSidebar, setSidebarOpen}) {
+function Sidebar({isOpen, toggleSidebar}) {
     const sideBarRef = useRef(null)
     const navInteract = (open) => {
         if (!sideBarRef.current) return

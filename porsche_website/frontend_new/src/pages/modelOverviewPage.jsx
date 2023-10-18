@@ -1,5 +1,4 @@
 import React from "react";
-import porsche0 from "../assets/porsche0/porsche-thumbwhite.webp";
 import Header from "../components/Header";
 import Sidebar, {modelCategories2} from "../components/SideBar";
 import {useParams} from "react-router-dom";
