@@ -62,15 +62,14 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .porsche0 {
     margin-left: 360px;
 }
+
 .Main-text {
     width: 600px;
-    height: 500px;
-    /*margin-left: 4.6%;*/
-    /*margin-top: 14.8%;*/
-    padding: 11em 0 0 4em;
+    margin-top: 30em;
 }
 
 .Main-text-title {
@@ -153,9 +152,15 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
+
 .Section-main {
     height: 110vh;
     background-image: url(../src/assets/taycan-main.png);
@@ -163,7 +168,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 
 .Section-models {
@@ -179,7 +183,7 @@
 /*    background-color: #FFFFFF;*/
 /*}*/
 
-.Header-models{
+.Header-models {
     overflow: hidden;
     padding: 10px 0;
     display: grid;
@@ -215,5 +219,85 @@ h1 {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Header-menu {
+        float: left;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Header-logo {
+        display: block;
+        margin-top: 14px;
+        max-width: 240px;
+        max-height: 16px;
+    }
+
+    .Header-search {
+        float: right;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Container {
+        width: 100%;
+        max-width: 768px;
+        max-height: 710px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .Main-text {
+        width: auto;
+        /*margin-left: 4.6%;*/
+        /*margin-top: 14.8%;*/
+        /*margin-top: 30em;*/
+    }
+
+    .Main-text-title {
+        color: #FFFFFF;
+        text-align: left;
+        margin-left: 0;
+        font-size: 2.5em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 180.027px */
+        font-family: "Porsche Next", sans-serif;
+    }
+
+    .model-categories {
+        width: 280px;
+        /*height: 920px;*/
+        flex-shrink: 0;
+        padding: 0 80px 0 0;
+    }
+
+    .category_car {
+        margin-bottom: 5px;
+        object-fit: scale-down;
+    }
+
+    .close-btn {
+        margin-top: 36px;
+        margin-left: 374px;
+        width: 48px;
+        height: 48px;
+        filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
     }
 }
