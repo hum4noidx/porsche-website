@@ -1,20 +1,15 @@
-// import React, {useState} from 'react';
-// import porsche_718 from "../assets/porsche-718.png";
-// import porsche_911 from "../assets/porsche-911.png";
-// import porsche_taycan from "../assets/porsche-taycan.png";
-// import porsche_panamera from "../assets/porsche-panamera.png";
-// import porsche_macan from "../assets/porsche-macan.png";
-// import porsche_cayenne from "../assets/porsche-cayenne.png";
+import {Link, Outlet} from "react-router-dom";
 
 const ModelCategoryList = ({modelCategories}) => {
     const listModelCategories = modelCategories.map(category =>
-        <a href={category.url}>
+        <Link to={`/models/${category.slug}`} className="category_car">
             <img src={category.img} alt={category.slug} className="category_car"/>
-        </a>
+        </Link>
     );
     return (
         <div className="model-categories">
             {listModelCategories}
+            <Outlet/>
         </div>
     );
 }

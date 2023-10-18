@@ -1,31 +1,22 @@
-import porsche_logo_black from "../assets/porsche-logo-black.svg";
-import search from "../assets/search-black.svg";
-import menu from "../assets/menu-black.svg";
-import React, {useState} from "react";
+import React from "react";
 import porsche0 from "../assets/porsche0/porsche-thumbwhite.webp";
-// import Header from "../components/Header";
+import Header from "../components/Header";
+import Sidebar, {modelCategories2} from "../components/SideBar";
+import {useParams} from "react-router-dom";
 
-const ModelsPage = () => {
-    const [isSidebarOpen, setSidebarOpen] = useState(false);
-
+const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
+    const {model_id} = useParams()
     return (
         <>
+            <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
+
             <section className="Section-models">
-                <div className="Container">
-                    <header className="Header">
-                        <img onClick={() => setSidebarOpen(!isSidebarOpen)} src={menu} alt="close" className="Header-menu-black"/>
-                        <a href="#">
-                            <img src={porsche_logo_black} alt="porsche-logo-black" className="Header-logo-black"/>
-                        </a>
-                        <a href="#">
-                            <img src={search} alt="search-button-black" className="Header-search-black"/>
-                        </a>
-                    </header>
-                </div>
+                <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
                 <div className="Container">
                     <h1>Model overview</h1>
+                    <h2>{model_id}</h2>
                     <a href="#">
-                        <img src={porsche0} alt="porsche0" className="porsche0"/>
+                        <img src={modelCategories2[model_id].img} alt="porsche0" className="porsche0"/>
                     </a>
                 </div>
             </section>
