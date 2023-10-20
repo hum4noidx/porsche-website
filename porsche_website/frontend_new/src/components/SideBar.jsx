@@ -1,11 +1,11 @@
 import React, {useEffect, useRef} from 'react';
 import ModelCategoryList from "./ModelCardList";
-import porsche_718 from "../assets/porsche-718.png";
-import porsche_911 from "../assets/porsche-911.png";
-import porsche_taycan from "../assets/porsche-taycan.png";
-import porsche_panamera from "../assets/porsche-panamera.png";
-import porsche_macan from "../assets/porsche-macan.png";
-import porsche_cayenne from "../assets/porsche-cayenne.png";
+import porsche_718 from "../assets/categories/porsche_718.png";
+import porsche_911 from "../assets/categories/porsche-911.png";
+import porsche_taycan from "../assets/categories/porsche-taycan.png";
+import porsche_panamera from "../assets/categories/porsche-panamera.png";
+import porsche_macan from "../assets/categories/porsche-macan.png";
+import porsche_cayenne from "../assets/categories/porsche-cayenne.png";
 
 let modelCategories = [
     {url: 'models/porsche_718', img: porsche_718, slug: 'porsche_718'},
