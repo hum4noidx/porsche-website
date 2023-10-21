@@ -3,8 +3,6 @@ import React from "react";
 import Header from "../components/Header";
 
 
-
-
 const MainPage = ({toggleSideBar, isSidebarOpen}) => {
     return (
         <>

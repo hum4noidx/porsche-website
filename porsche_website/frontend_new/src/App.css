@@ -69,14 +69,14 @@
 
 .Main-text {
     width: 600px;
-    margin-top: 30em;
+    margin-top: 13em;
 }
 
 .Main-text-title {
     color: #FFFFFF;
     text-align: left;
     margin-top: 33px;
-    margin-left: 105px;
+    margin-left: 160px;
     font-size: 4.7em;
     font-style: normal;
     font-weight: 400;
@@ -202,8 +202,40 @@ h1 {
     font-size: 36px;
     font-weight: 700;
     font-family: "Porsche Next", sans-serif;
-    margin-left: 84px;
+    margin-left: 60px;
     margin-top: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Porsche Next", sans-serif;
+    margin-left: 372px;
+    margin-top: 12px;
+}
+
+.models {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-content: flex-start;
+    margin-left: 330px;
+    margin-top: 12px;
+}
+
+.Section_model {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.car_model {
+
+}
+
+@media screen and (max-width: 1000px) {
+    .models {
+        width: 40%;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
