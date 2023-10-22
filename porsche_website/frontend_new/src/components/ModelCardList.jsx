@@ -4,19 +4,24 @@ import {useFetching} from "../hooks/UseFetching";
 import {useEffect, useState} from "react";
 
 const ModelCategoryList = ({toggleSidebar}) => {
-    const [cars, setCars] = useState([]);
+    const [categories, setCarsCategories] = useState([]);
 
     const [fetchingCars, isCardsLoading, cardsError] = useFetching(async () => {
         let response = await CarService.get_categories();
         console.log(response)
-        setCars(response)
+        setCarsCategories(response)
     });
-    console.log(cars)
+    console.log(categories)
     useEffect(() => {
         fetchingCars().catch(e => console.log(e))
     }, []);
-
-    const listModelCategories = cars.map((category, index) =>
+    if (isCardsLoading) {
+        return <div>Loading...</div>
+    }
+    if (cardsError) {
+        return <div>{cardsError}</div>
+    }
+    const listModelCategories = categories.map((category, index) =>
         <Link key={index} to={`/models/${category.slug}`} className="category_car" onClick={toggleSidebar}>
             <img src={`/assets/categories/${category.slug}.png`} alt={category.name} className="category_car"/>
         </Link>

@@ -1,6 +1,6 @@
 import Sidebar from "../components/SideBar";
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/UI/Header/Header";
 
 
 const MainPage = ({toggleSideBar, isSidebarOpen}) => {

@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import Sidebar, from "../components/SideBar";
-// import porsche_carrera from "../assets/911-porsche-carrera.webp";
+import Header from "../components/UI/Header/Header";
+import Sidebar from "../components/SideBar";
+// import porsche_carrera from "../assets/porsche_911-porsche-carrera.webp";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     return (

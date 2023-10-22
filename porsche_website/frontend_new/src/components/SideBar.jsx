@@ -1,30 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import ModelCategoryList from "./ModelCardList";
-import porsche_718 from "../assets/categories/porsche_718.png";
-import porsche_911 from "../assets/categories/porsche-911.png";
-import porsche_taycan from "../assets/categories/porsche-taycan.png";
-import porsche_panamera from "../assets/categories/porsche-panamera.png";
-import porsche_macan from "../assets/categories/porsche-macan.png";
-import porsche_cayenne from "../assets/categories/porsche-cayenne.png";
-
-let modelCategories = [
-    {url: 'models/porsche_718', img: porsche_718, slug: 'porsche_718'},
-    {url: 'models/porsche_911', img: porsche_911, slug: 'porsche_911'},
-    {url: 'models/porsche_taycan', img: porsche_taycan, slug: 'porsche_taycan'},
-    {url: 'models/porsche_panamera', img: porsche_panamera, slug: 'porsche_panamera'},
-    {url: 'models/porsche_macan', img: porsche_macan, slug: 'porsche_macan'},
-    {url: 'models/porsche_cayenne', img: porsche_cayenne, slug: 'porsche_cayenne'},
-];
-
-
-let modelCategories2 = {
-    "porsche_718": {url: 'models/porsche_718', img: porsche_718, slug: 'porsche_718'},
-    "porsche_911": {url: 'models/porsche_911', img: porsche_911, slug: 'porsche_911'},
-    "porsche_taycan": {url: 'models/porsche_taycan', img: porsche_taycan, slug: 'porsche_taycan'},
-    "porsche_panamera": {url: 'models/porsche_panamera', img: porsche_panamera, slug: 'porsche_panamera'},
-    "porsche_macan": {url: 'models/porsche_macan', img: porsche_macan, slug: 'porsche_macan'},
-    "porsche_cayenne": {url: 'models/porsche_cayenne', img: porsche_cayenne, slug: 'porsche_cayenne'},
-};
 
 function Sidebar({isOpen, toggleSidebar}) {
     const sideBarRef = useRef(null)
@@ -47,7 +22,7 @@ function Sidebar({isOpen, toggleSidebar}) {
             <div id="mySidenav" ref={sideBarRef}
                  className={`sidenav fixed inset-y-0 left-0 z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} w-64 bg-gray-800 p-8`}>
                 <ModelCategoryList
-                    modelCategories={modelCategories} toggleSidebar={toggleSidebar}
+                    toggleSidebar={toggleSidebar}
                 />
                 <a href="javascript:void(0)" className="close-btn" onClick={() => navInteract(false)}>&times;</a>
 
@@ -58,4 +33,3 @@ function Sidebar({isOpen, toggleSidebar}) {
 }
 
 export default Sidebar;
-export {modelCategories2};
