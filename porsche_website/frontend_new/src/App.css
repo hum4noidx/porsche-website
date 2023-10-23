@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
     font-family: Porsche Next;
     src: url(../src/assets/porsche-next-bold.otf) format("otf"),
@@ -141,8 +140,12 @@
     background-repeat: no-repeat;
 }
 
-
 .Section-models {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.Section_model {
     height: 110vh;
     background-color: #FFFFFF;
 }
@@ -202,6 +205,101 @@ h2 {
     background-color: #FFFFFF;
 }
 
+.car_model {
+    /*margin-left: 15%;*/
+    /*margin: 10px auto 20px auto;*/
+    /*padding: 10px 220px 20px 220px;*/
+    padding: 10px 15.5% 20px 15.5%;
+}
+
+.car_name {
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.car_model_price {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.car_inform {
+    transform: rotate(90deg);
+    max-width: 702px;
+    max-height: 300px;
+    margin-top: 300px;
+}
+
+.car_inf {
+    font-family: "Porsche Next", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.car_height {
+    margin-top: -600px;
+    margin-left: 130px;
+}
+
+.car_height_dim {
+    margin-left: 130px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_width {
+    margin-top: -40px;
+    margin-left: 380px;
+}
+
+.car_width_dim {
+    margin-left: 380px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_wheelbase {
+    margin-top: 560px;
+    margin-left: 60px;
+}
+
+.car_wheelbase_dim {
+    margin-left: 60px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_length {
+    margin-top: -140px;
+    margin-left: 530px;
+}
+
+.car_length_dim {
+    margin-left: 530px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.tech_sp {
+    margin-left: 700px;
+    margin-top: -620px;
+}
+
+.per {
+    margin-left: 700px;
+    margin-top: 4px;
+    font-size: 28px;
+}
+
+.tts {
+
+}
+
 @media screen and (max-width: 1000px) {
     .models {
         width: 40%;
@@ -226,6 +324,36 @@ h2 {
 
 
 @media screen and (max-width: 768px) {
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Header-menu {
+        float: left;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Header-logo {
+        display: block;
+        margin-top: 14px;
+        max-width: 240px;
+        max-height: 16px;
+    }
+
+    .Header-search {
+        float: right;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
 
     .Container {
         width: 100%;
