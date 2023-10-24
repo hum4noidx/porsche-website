@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
     font-family: Porsche Next;
     src: url(../src/assets/porsche-next-bold.otf) format("otf"),
@@ -13,6 +11,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 .App {
     text-align: center;
 }
@@ -22,62 +21,28 @@
     pointer-events: none;
 }
 
-.Header {
-    overflow: hidden;
-    padding: 10px 0;
-    /*display: grid;*/
-    /*grid-template-columns: 1fr auto 1fr;*/
-    /*grid-template-rows: 1fr;*/
-    /*gap: 0 0;*/
-    /*grid-template-areas: "left center right";*/
-    /*width: 100%;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.Header-menu {
-    float: left;
-    cursor: pointer;
-    margin-left: 8px;
-    margin-top: 8px;
-    width: 24px;
-    height: 24px;
-    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
-}
-
-.Header-logo {
-    display: block;
-    margin-top: 14px;
-    max-width: 240px;
-    max-height: 16px;
-}
-
-.Header-search {
-    float: right;
-    cursor: pointer;
-    margin-right: 8px;
-    margin-top: 8px;
-    width: 24px;
-    height: 24px;
-    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
-}
-
 .Container {
     width: 100%;
     max-width: 1440px;
+    max-height: 710px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.porsche0 {
+    margin-left: 360px;
+}
+
 .Main-text {
     width: 600px;
-    height: 500px;
-    padding: 11em 0 0 5em;
+    margin-top: 13em;
 }
+
 .Main-text-title {
     color: #FFFFFF;
     text-align: left;
     margin-top: 33px;
-    margin-left: 105px;
+    margin-left: 160px;
     font-size: 4.7em;
     font-style: normal;
     font-weight: 400;
@@ -85,11 +50,86 @@
     font-family: "Porsche Next", sans-serif;
 }
 
-.img-718 {
-    width: 100%;
-    height: 100%;
+.model-categories {
+    width: 280px;
+    /*height: 920px;*/
+    flex-shrink: 0;
+    padding: 0 80px 0 0;
+}
+.model img {
+    width: 250px;
     object-fit: cover;
     object-position: center;
+}
+.category_car {
+    margin-bottom: 5px;
+    object-fit: scale-down;
+}
+
+.close-btn {
+    margin-top: 36px;
+    margin-left: 374px;
+    width: 48px;
+    height: 48px;
+    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    /*background: linear-gradient(90deg, #D4D4D4 0%, rgba(234, 234, 234, 0.85) 36.46%, rgba(242, 242, 242, 0.53) 100%);*/
+    background: #EEEFF2;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-y: hidden;
+}
+
+/* The navigation menu links */
+.sidenav div a {
+    padding: 3px 3px 3px 3px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav div img:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .close-btn {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    font-size: 36px;
+    margin-left: 0;
+    margin-top: auto;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 .Section-main {
@@ -99,26 +139,179 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.Section-models {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.Section_model {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+/*.Models {*/
+/*    height: 110vh;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-color: #FFFFFF;*/
+/*}*/
+
+.Header-models {
+    overflow: hidden;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    grid-template-areas: "left center right";
+    width: 100%;
+    background-color: #FFFFFF;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Porsche Next", sans-serif;
+    margin-left: 60px;
+    margin-top: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Porsche Next", sans-serif;
+    margin-left: 372px;
+    margin-top: 12px;
+}
+
+.models {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-content: flex-start;
+    margin-left: 330px;
+    margin-top: 12px;
+}
+.model {
+    flex-basis: 33.33333%;
+}
+.Section_model {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.car_model {
+    /*margin-left: 15%;*/
+    /*margin: 10px auto 20px auto;*/
+    /*padding: 10px 220px 20px 220px;*/
+    padding: 10px 15.5% 20px 15.5%;
+}
+
+.car_name {
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.car_model_price {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.car_inform {
+    transform: rotate(90deg);
+    max-width: 702px;
+    max-height: 300px;
+    margin-top: 300px;
+}
+
+.car_inf {
+    font-family: "Porsche Next", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.car_height {
+    margin-top: -600px;
+    margin-left: 130px;
+}
+
+.car_height_dim {
+    margin-left: 130px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_width {
+    margin-top: -40px;
+    margin-left: 380px;
+}
+
+.car_width_dim {
+    margin-left: 380px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_wheelbase {
+    margin-top: 560px;
+    margin-left: 60px;
+}
+
+.car_wheelbase_dim {
+    margin-left: 60px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_length {
+    margin-top: -140px;
+    margin-left: 530px;
+}
+
+.car_length_dim {
+    margin-left: 530px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.tech_sp {
+    margin-left: 700px;
+    margin-top: -620px;
+}
+
+.per {
+    margin-left: 700px;
+    margin-top: 4px;
+    font-size: 28px;
+}
+
+.tts {
+
+}
+
+@media screen and (max-width: 1000px) {
+    .models {
+        width: 40%;
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
     }
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
 
 @keyframes App-logo-spin {
     from {
@@ -126,5 +319,85 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Header-menu {
+        float: left;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Header-logo {
+        display: block;
+        margin-top: 14px;
+        max-width: 240px;
+        max-height: 16px;
+    }
+
+    .Header-search {
+        float: right;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Container {
+        width: 100%;
+        max-width: 768px;
+        max-height: 710px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .Main-text {
+        width: auto;
+        /*margin-left: 4.6%;*/
+        /*margin-top: 14.8%;*/
+        /*margin-top: 30em;*/
+    }
+
+    .Main-text-title {
+        color: #FFFFFF;
+        text-align: left;
+        margin-left: 0;
+        font-size: 2.5em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 180.027px */
+        font-family: "Porsche Next", sans-serif;
+    }
+
+    .model-categories {
+        width: 280px;
+        /*height: 920px;*/
+        flex-shrink: 0;
+        padding: 0 80px 0 0;
+    }
+
+    .category_car {
+        margin-bottom: 5px;
+        object-fit: scale-down;
+    }
+
+    .close-btn {
+        margin-top: 36px;
+        margin-left: 374px;
+        width: 48px;
+        height: 48px;
+        filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
     }
 }
