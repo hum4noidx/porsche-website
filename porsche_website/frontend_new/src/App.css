@@ -227,21 +227,20 @@ h2 {
 }
 
 .car_inform {
-    /*transform: rotate(90deg);*/
-    /*max-width: 702px;*/
-    /*max-height: 300px;*/
-    margin-top: -560px;
-    /*margin-left: 700px;*/
-    position: relative;
-    text-align: center;
-    color: black;
-    padding: 0px 72px 0 800px;
-    /*width: 50%;*/
+        /*transform: rotate(90deg);*/
+        /*max-width: 702px;*/
+        /*max-height: 300px;*/
+        /*margin-top: -560px;*/
+        /*margin-left: 700px;*/
+        /*position: relative;*/
+        /*text-align: center;*/
+        /*color: black;*/
+        /*padding: 0px 72px 0 800px;*/
+        width: 50%;
 }
 
 .car_specs {
-    /*float: left;*/
-    /*margin-bottom: 15px;*/
+    display: block;
 }
 
 /*.container div {*/
@@ -253,9 +252,10 @@ h2 {
 /*}*/
 
 .image {
-    transform: rotate(90deg);
+    /*transform: rotate(90deg);*/
     max-width: 702px;
     max-height: 300px;
+    display: block;
 }
 
 .top-left {
