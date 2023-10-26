@@ -11,7 +11,7 @@ const SmallCar = ({car, category}) => {
                 {car.name}
             </div>
             <div className="car_price">
-                From $ {car.price}. *
+                From $ {(car.price/1000).toFixed(3).toString().replace(".", ",")}
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import axios from "axios";
 
 let serverPath = "";
 
-serverPath = "http://10.8.0.2:8000/api/v1"
+serverPath = "https://api.porsche.hm4nx.ru/api/v1"
 
 
 export default class CarService {
