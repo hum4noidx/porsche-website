@@ -71,7 +71,9 @@
     margin-left: 374px;
     width: 48px;
     height: 48px;
-    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+    /*filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);*/
+    text-decoration: none;
+    color: #818181;
 }
 
 /* The side navigation menu */
@@ -218,6 +220,7 @@ h2 {
     margin-top: 10px;
     font-size: 40px;
     text-align: center;
+    font-weight: bold;
 }
 
 .car_model_price {
@@ -227,91 +230,52 @@ h2 {
 }
 
 .car_inform {
-        /*transform: rotate(90deg);*/
-        /*max-width: 702px;*/
-        /*max-height: 300px;*/
-        /*margin-top: -560px;*/
-        /*margin-left: 700px;*/
-        /*position: relative;*/
-        /*text-align: center;*/
-        /*color: black;*/
-        /*padding: 0px 72px 0 800px;*/
-        width: 50%;
+    width: 700px;
+    max-width: 768px;
+    margin-top: 15em;
+    position: relative;
+}
+.car_inform svg {
+    transform: rotate(90deg);
 }
 
 .car_specs {
     display: block;
 }
 
-/*.container div {*/
-/*    float: left;*/
-/*    margin-bottom: 15px;*/
-/*}*/
-/*.col-1-2 {*/
-/*    width: 50%;*/
-/*}*/
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
 
-.image {
-    /*transform: rotate(90deg);*/
-    max-width: 702px;
-    max-height: 300px;
-    display: block;
+.bold-text {
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .top-left {
     position: absolute;
-    top: 8px;
-    left: 16px;
-    padding: 0 72px 0 800px;
-}
-
-.top-left_value {
-    position: absolute;
-    top: 30px;
-    left: 16px;
-    padding: 0 72px 0 800px;
+    top: -20%;
+    left: 48px;
 }
 
 .top-right {
     position: absolute;
-    top: 8px;
-    right: -24px;
-    padding: 0 72px 0 800px;
-}
-
-.top-right_value {
-    position: absolute;
-    top: 30px;
+    top: -20%;
     right: 16px;
-    padding: 0 72px 0 800px;
 }
 
 .bottom-right {
     position: absolute;
-    bottom: 8px;
-    right: 16px;
-    padding: 0 72px 0 800px;
-}
-
-.bottom-left_value {
-    position: absolute;
-    bottom: 30px;
-    left: 16px;
-    padding: 0 72px 0 800px;
+    bottom: 55%;
+    right: 48px;
 }
 
 .bottom-left {
     position: absolute;
-    bottom: 8px;
-    left: 16px;
-    padding: 0 72px 0 800px;
-}
-
-.bottom-right_value {
-    position: absolute;
-    bottom: 30px;
-    right: 16px;
-    padding: 0 72px 0 800px;
+    bottom: 55%;
+    left: 30px;
 }
 
 .car_inf {
@@ -369,7 +333,7 @@ h2 {
 }
 
 .car_details {
-    padding: 16px 0 10px 72px;
+    padding: 16px 0 10px 36px;
     font-size: 18px;
     font-family: "Porsche Next", sans-serif;
     font-weight: bold;
@@ -382,7 +346,7 @@ h2 {
 
 .detail-name {
     width: 400px;
-    padding: 15px 100px 10px 0;
+    padding: 4px 84px 4px 16px;
     color: #818181;
     font-size: 16px;
     font-weight: normal;
@@ -390,7 +354,6 @@ h2 {
 
 .detail-value {
     width: 135px;
-    padding: 10px 0 10px 0;
     font-weight: bold;
     font-size: 22px;
 }
@@ -403,7 +366,7 @@ h2 {
 .per {
     font-weight: bold;
     font-size: 30px;
-    padding: 16px 25px 8px 0;
+    /*padding: 16px 25px 8px 0;*/
 }
 
 .hl {
