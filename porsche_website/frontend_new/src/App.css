@@ -29,10 +29,6 @@
     padding: 0 20px;
 }
 
-.porsche0 {
-    margin-left: 360px;
-}
-
 .Main-text {
     width: 600px;
     margin-top: 13em;
@@ -152,14 +148,6 @@
     background-color: #FFFFFF;
 }
 
-/*.Models {*/
-/*    height: 110vh;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    background-color: #FFFFFF;*/
-/*}*/
-
 .Header-models {
     overflow: hidden;
     padding: 10px 0;
@@ -256,25 +244,25 @@ h2 {
 
 .top-left {
     position: absolute;
-    top: -20%;
+    top: -10%;
     left: 48px;
 }
 
 .top-right {
     position: absolute;
-    top: -20%;
+    top: -10%;
     right: 16px;
 }
 
 .bottom-right {
     position: absolute;
-    bottom: 55%;
+    bottom: 75%;
     right: 48px;
 }
 
 .bottom-left {
     position: absolute;
-    bottom: 55%;
+    bottom: 75%;
     left: 30px;
 }
 
@@ -345,17 +333,19 @@ h2 {
 }
 
 .detail-name {
-    width: 400px;
+    width: 25em;
+    /*width: 400px;*/
     padding: 4px 84px 4px 16px;
     color: #818181;
-    font-size: 16px;
+    font-size: 0.9em;
     font-weight: normal;
 }
 
 .detail-value {
-    width: 135px;
+    width: 9em;
+    /*width: 170px;*/
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.2em;
 }
 
 .tech_sp {
@@ -366,11 +356,16 @@ h2 {
 .per {
     font-weight: bold;
     font-size: 30px;
-    /*padding: 16px 25px 8px 0;*/
 }
 
 .hl {
-    margin-top: 360px;
+    padding: 26px 16px 16px 16px;
+}
+
+.tech_sp_hl {
+    font-weight: bold;
+    font-size: 38px;
+    margin-left: 36px;
 }
 
 .img_hl {
@@ -380,9 +375,48 @@ h2 {
 }
 
 .Lorem {
+    padding: 24px 18px 18px 18px;
+    font-size: 16px;
+    font-family: "Porsche Next", sans-serif;
     float: left;
-    margin-bottom: 15px;
-    width: 25%;
+    width: 20%;
+}
+
+.bold-text_hl {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.porsche_normal {
+    margin-left: -20px;
+    /*width: 100%;*/
+    max-width: 1440px;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+}
+
+.top-left_new {
+    position: absolute;
+    top: 2710px;
+    left: 84px;
+    color: #FFFFFF;
+}
+
+.bold-text_coupe {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.bold-text_new {
+    position: absolute;
+}
+
+.line {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 1px solid red;
+    width: 100%
 }
 
 @media screen and (max-width: 1000px) {
@@ -397,7 +431,6 @@ h2 {
     }
 }
 
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -406,7 +439,6 @@ h2 {
         transform: rotate(360deg);
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .Header {
