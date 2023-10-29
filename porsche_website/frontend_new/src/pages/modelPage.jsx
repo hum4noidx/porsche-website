@@ -48,6 +48,82 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
 
                                 <div>
                                     <div style={{width: "95%"}}>
+                                        <p className="per">Motor</p>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Bore</span>
+                                        </div>
+                                        <div className="detail-value"><span>91.0 mm</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Stroke</span>
+                                        </div>
+                                        <div className="detail-value"><span>76.4 mm</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Displacement</span>
+                                        </div>
+                                        <div className="detail-value"><span>2,981 cc</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Max. power</span>
+                                        </div>
+                                        <div className="detail-value"><span>379 hp</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Max. power at rpm</span>
+                                        </div>
+                                        <div className="detail-value"><span>6,500 rpm</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Max. engine speed</span>
+                                        </div>
+                                        <div className="detail-value"><span>7,500 rpm</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div><div className="detail-card">
+                                        <div className="detail-name"><span>Max. torque</span>
+                                        </div>
+                                        <div className="detail-value"><span>331 lb-ft</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Max. torque at rpm</span>
+                                        </div>
+                                        <div className="detail-value"><span>1,950 - 5,000 rpm</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+                                    <div className="detail-card">
+                                        <div className="detail-name"><span>Max. power per liter</span>
+                                        </div>
+                                        <div className="detail-value"><span>126.3 hp/l</span></div>
+                                    </div>
+                                    <div style={{width: "90%"}}>
+                                        <hr/>
+                                    </div>
+
+                                    <div style={{width: "95%"}}>
                                         <p className="per">Performance</p>
                                         <hr/>
                                     </div>
@@ -541,9 +617,12 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
 
                     <sectoin>
                         <div>
-                            <div>
+                            <div className="container_new">
                                 <img src={porsche_normal} alt="coupe_carrera" className="porsche_normal"/>
-                                <div className="top-left_new" style={{width: "45%"}}>
+                                {/*<img src="https://placehold.co/1440x720" alt="coupe_carrera" className="porsche_normal"/>*/}
+
+                                <div className="top-left_new" style={{width: "40%"}}>
+                                    <p className="body_shapes">Car body shapes</p>
                                     <span className="bold-text_coupe">Coupé</span>
                                     <div  className="line">
                                     </div>
@@ -555,6 +634,12 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                             </div>
                         </div>
                     </sectoin>
+
+                    <section>
+                        <div>
+                            <p className="gallery">Gallery</p>
+                        </div>
+                    </section>
                 </div>
             </section>
         </>

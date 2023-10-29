@@ -223,6 +223,7 @@ h2 {
     margin-top: 15em;
     position: relative;
 }
+
 .car_inform svg {
     transform: rotate(90deg);
 }
@@ -245,25 +246,29 @@ h2 {
 .top-left {
     position: absolute;
     top: -10%;
-    left: 48px;
+    left: 16px;
+    width: 170px;
 }
 
 .top-right {
     position: absolute;
     top: -10%;
     right: 16px;
+    width: 170px;
 }
 
 .bottom-right {
     position: absolute;
     bottom: 75%;
-    right: 48px;
+    right: 16px;
+    width: 170px;
 }
 
 .bottom-left {
     position: absolute;
     bottom: 75%;
-    left: 30px;
+    left: 16px;
+    width: 170px;
 }
 
 .car_inf {
@@ -351,11 +356,13 @@ h2 {
 .tech_sp {
     font-weight: bold;
     font-size: 38px;
+    margin-left: 16px;
 }
 
 .per {
     font-weight: bold;
     font-size: 30px;
+    margin-left: 16px;
 }
 
 .hl {
@@ -391,25 +398,31 @@ h2 {
     margin-left: -20px;
     /*width: 100%;*/
     max-width: 1440px;
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
+    /*max-width: 100%;*/
+}
+
+.container_new {
+    position: relative;
+    text-align: left;
 }
 
 .top-left_new {
     position: absolute;
-    top: 2710px;
+    top: 480px;
     left: 84px;
     color: #FFFFFF;
+    font-family: "Porsche Next", sans-serif;
+}
+
+.body_shapes {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 16px;
 }
 
 .bold-text_coupe {
     font-weight: bold;
-    font-size: 28px;
-}
-
-.bold-text_new {
-    position: absolute;
+    font-size: 24px;
 }
 
 .line {
@@ -417,6 +430,18 @@ h2 {
     margin-bottom: 16px;
     border-top: 1px solid red;
     width: 100%
+}
+
+.bold-text_new {
+    position: absolute;
+}
+
+.gallery {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+    margin-left: 52px;
 }
 
 @media screen and (max-width: 1000px) {
