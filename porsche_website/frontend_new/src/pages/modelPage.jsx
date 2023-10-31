@@ -13,10 +13,12 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
         let response = await CarService.get_car_by_id(car_id);
         setCar(response)
     });
+    console.log(car)
     useEffect(() => {
         fetchingCar().catch(e => console.log(e))
     }, [car_id]);
-
+    let carSpecs = car.car_specs
+    let pm_specs = carSpecs.performance_specs
     return (
         <>
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
@@ -34,7 +36,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     911 Carrera
                                 </div>
                                 <div className="car_model_price">
-                                    From $ 114,400
+                                    From $ {(car.price / 1000).toFixed(3).toString().replace(".", ",")}
                                 </div>
                             </div>
                         </div>
@@ -55,14 +57,18 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     <div className="detail-card">
                                         <div className="detail-name"><span>Top track speed (with summer tires)</span>
                                         </div>
-                                        <div className="detail-value"><span>191 mph</span></div>
+                                        <div className="detail-value">
+                                            <span>{pm_specs.top_track_speed} mph</span>
+                                        </div>
                                     </div>
                                     <div style={{width: "85%"}}>
                                         <hr/>
                                     </div>
                                     <div className="detail-card">
                                         <div className="detail-name"><span>0 - 60 mph</span></div>
-                                        <div className="detail-value"><span>4.0 s</span></div>
+                                        <div className="detail-value">
+                                            <span>{pm_specs.zero_to_100_kmh}</span>
+                                        </div>
                                     </div>
                                     <div style={{width: "85%"}}>
                                         <hr/>
@@ -70,7 +76,9 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     <div className="detail-card">
                                         <div className="detail-name"><span>0 - 60 mph with Sport Chrono Package</span>
                                         </div>
-                                        <div className="detail-value"><span>3.8 s</span></div>
+                                        <div className="detail-value">
+                                            {/*<span>{car.car_specs.performance_specs.zero_to_100_mph}</span>*/}
+                                        </div>
                                     </div>
                                     <div style={{width: "85%"}}>
                                         <hr/>

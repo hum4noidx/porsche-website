@@ -12,10 +12,8 @@ const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
     const [carsCategory, setCarsCategory] = useState([]);
     const [fetchingCarsCategory, isCarsCategoryLoading, carsCategoryError] = useFetching(async () => {
         let response = await CarService.get_cars_by_category(model_id);
-        console.log(response)
         setCarsCategory(response)
     });
-    console.log(carsCategory)
     useEffect(() => {
         fetchingCarsCategory().catch(e => console.log(e))
     }, [model_id]);
