@@ -18,13 +18,11 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     useEffect(() => {
         fetchingCar().catch(e => console.log(e))
     }, [car_id]);
-    let carSpecs = car.car_specs
-    let pm_specs = carSpecs.performance_specs
     return (
         <>
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
 
-            <section className="Section-model">
+            {car && <section className="Section-model">
                 <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
                 <div className="Container">
                     <section>
@@ -41,7 +39,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                         {/*</div>*/}
                     </section>
 
-                    <section>
+                     <section>
                         <div className="car_specs d-flex">
                             <div className="car_details flex-shrink-0">
                                 <div>
@@ -56,7 +54,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     <div className="detail-card">
                                         <div className="detail-name"><span>Bore</span>
                                         </div>
-                                        <div className="detail-value"><span>91.0 mm</span></div>
+                                        <div className="detail-value"><span>{car.car_specs.motor_specs.bore}</span></div>
                                     </div>
                                     <div style={{width: "90%"}}>
                                         <hr/>
@@ -133,7 +131,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                         <div className="detail-name"><span>Top track speed (with summer tires)</span>
                                         </div>
                                         <div className="detail-value">
-                                            <span>{pm_specs.top_track_speed} mph</span>
+                                            {/*<span>{pm_specs.top_track_speed} mph</span>*/}
                                         </div>
                                     </div>
                                     <div style={{width: "90%"}}>
@@ -142,7 +140,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     <div className="detail-card">
                                         <div className="detail-name"><span>0 - 60 mph</span></div>
                                         <div className="detail-value">
-                                            <span>{pm_specs.zero_to_100_kmh}</span>
+                                            {/*<span>{pm_specs.zero_to_100_kmh}</span>*/}
                                         </div>
                                     </div>
                                     <div style={{width: "90%"}}>
@@ -395,7 +393,6 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                             d="m52.32 130c2.31-3 .11-8.45-4.92-12.24s-11-4.46-13.28-1.49-.12 8.48 4.88 12.27 11 4.46 13.32 1.46z"
                                             strokeWidth=".57" transform="translate(-5.63 -8.73)"></path>
                                         <path
-                                            d="m279 109.11s-.13 1-.31 1.82a21.37 21.37 0 0 0 -.6 4.42 16.89 16.89 0 0 0 2 5.59c1 1.6 2.2 3.43 2.51 4.16"
                                             strokeWidth=".57" transform="translate(-5.63 -8.73)"></path>
                                         <path d="m191.27 125s4.32 5 4.32 8.22c0 0 .18 1-2.63 1" strokeWidth=".43"
                                               transform="translate(-5.63 -8.73)"></path>
@@ -649,7 +646,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                         </div>
                     </section>
                 </div>
-            </section>
+            </section>}
         </>
     )
 }
