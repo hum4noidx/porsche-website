@@ -29,10 +29,6 @@
     padding: 0 20px;
 }
 
-.porsche0 {
-    margin-left: 360px;
-}
-
 .Main-text {
     width: 600px;
     margin-top: 13em;
@@ -152,14 +148,6 @@
     background-color: #FFFFFF;
 }
 
-/*.Models {*/
-/*    height: 110vh;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    background-color: #FFFFFF;*/
-/*}*/
-
 .Header-models {
     overflow: hidden;
     padding: 10px 0;
@@ -235,6 +223,7 @@ h2 {
     margin-top: 15em;
     position: relative;
 }
+
 .car_inform svg {
     transform: rotate(90deg);
 }
@@ -256,26 +245,30 @@ h2 {
 
 .top-left {
     position: absolute;
-    top: -20%;
-    left: 48px;
+    top: -10%;
+    left: 16px;
+    width: 170px;
 }
 
 .top-right {
     position: absolute;
-    top: -20%;
+    top: -10%;
     right: 16px;
+    width: 170px;
 }
 
 .bottom-right {
     position: absolute;
-    bottom: 55%;
-    right: 48px;
+    bottom: 75%;
+    right: 16px;
+    width: 170px;
 }
 
 .bottom-left {
     position: absolute;
-    bottom: 55%;
-    left: 30px;
+    bottom: 75%;
+    left: 16px;
+    width: 170px;
 }
 
 .car_inf {
@@ -345,32 +338,41 @@ h2 {
 }
 
 .detail-name {
-    width: 400px;
+    width: 25em;
+    /*width: 400px;*/
     padding: 4px 84px 4px 16px;
     color: #818181;
-    font-size: 16px;
+    font-size: 0.9em;
     font-weight: normal;
 }
 
 .detail-value {
-    width: 135px;
+    width: 9em;
+    /*width: 170px;*/
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.2em;
 }
 
 .tech_sp {
     font-weight: bold;
     font-size: 38px;
+    margin-left: 16px;
 }
 
 .per {
     font-weight: bold;
     font-size: 30px;
-    /*padding: 16px 25px 8px 0;*/
+    margin-left: 16px;
 }
 
 .hl {
-    margin-top: 360px;
+    padding: 26px 16px 16px 16px;
+}
+
+.tech_sp_hl {
+    font-weight: bold;
+    font-size: 38px;
+    margin-left: 36px;
 }
 
 .img_hl {
@@ -380,9 +382,66 @@ h2 {
 }
 
 .Lorem {
+    padding: 24px 18px 18px 18px;
+    font-size: 16px;
+    font-family: "Porsche Next", sans-serif;
     float: left;
-    margin-bottom: 15px;
-    width: 25%;
+    width: 20%;
+}
+
+.bold-text_hl {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.porsche_normal {
+    margin-left: -20px;
+    /*width: 100%;*/
+    max-width: 1440px;
+    /*max-width: 100%;*/
+}
+
+.container_new {
+    position: relative;
+    text-align: left;
+}
+
+.top-left_new {
+    position: absolute;
+    top: 480px;
+    left: 84px;
+    color: #FFFFFF;
+    font-family: "Porsche Next", sans-serif;
+}
+
+.body_shapes {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 16px;
+}
+
+.bold-text_coupe {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.line {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 1px solid red;
+    width: 100%
+}
+
+.bold-text_new {
+    position: absolute;
+}
+
+.gallery {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+    margin-left: 52px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -397,7 +456,6 @@ h2 {
     }
 }
 
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -406,7 +464,6 @@ h2 {
         transform: rotate(360deg);
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .Header {
