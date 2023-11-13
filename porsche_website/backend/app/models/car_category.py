@@ -1,3 +1,5 @@
+from typing import List
+
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -11,7 +13,8 @@ class CarCategory(Base):
     id: Mapped[int] = mapped_column(Integer, autoincrement=True, primary_key=True)
     slug: Mapped[str] = mapped_column(String(255), nullable=False)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
-    # cars = relationship("Car", back_populates="car_category")
+
+    cars: Mapped[List["Car"]] = relationship(lazy="selectin", order_by="Car.id")
 
     def to_dto(self) -> CarCategoryRead:
         return CarCategoryRead.model_validate(self)

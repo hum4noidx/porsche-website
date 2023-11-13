@@ -8,7 +8,7 @@ class MotorSpecs(Base):
     __tablename__ = "motor_specs"
 
     id: Mapped[int] = mapped_column(Integer, autoincrement=True, primary_key=True)
-    car_specs_id: Mapped[int] = mapped_column(ForeignKey("car_specs.id"), nullable=False)
+    car_specs_id: Mapped[int] = mapped_column(ForeignKey("car_specs.id", ondelete="CASCADE"), nullable=False)
     bore: Mapped[str] = mapped_column(String(255), nullable=False)
     stroke: Mapped[str] = mapped_column(String(255), nullable=False)
     displacement: Mapped[str] = mapped_column(String(255), nullable=False)

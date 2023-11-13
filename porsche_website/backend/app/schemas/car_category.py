@@ -1,4 +1,8 @@
+from typing import List
+
 from pydantic import BaseModel, ConfigDict
+
+from app.schemas.car import CarRead
 
 
 class CarCategoryCreate(BaseModel):
@@ -12,6 +16,6 @@ class CarCategoryUpdate(CarCategoryCreate):
 
 class CarCategoryRead(CarCategoryCreate):
     id: int
-    # cars: List[CarRead] | None = None
+    cars: List[CarRead] | None = None
 
     model_config = ConfigDict(from_attributes=True)

@@ -29,3 +29,20 @@ async def get_car_categories(
         return None
     response.headers["Content-Range"] = f"{skip}-{skip + len(car_categories)}/{len(car_categories)}"
     return car_categories
+
+
+@router.get("/{car_category}", response_model=Optional[CarCategoryRead])
+async def get_cars_for_category(
+        car_category: str,
+        response: Response,
+        session: SessionDB,
+        skip: int = 0,
+        limit: int = 100,
+):
+    car_repo: CarRepo = CarRepo(session)
+    category = await car_repo.get_car_category(car_category, skip, limit)
+    if not category:
+        logger.warning(f"No car category found for id: {car_category}")
+        return None
+    response.headers["Content-Range"] = f"{skip}-{skip + len(category.cars)}/{len(category.cars)}"
+    return category
