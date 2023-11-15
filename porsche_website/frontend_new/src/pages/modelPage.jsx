@@ -6,6 +6,8 @@ import {useFetching} from "../hooks/UseFetching";
 import CarService from "../API/CarService";
 import porsche_normal from "../porsche-normal.webp";
 import Footer from "../components/UI/Footer/Footer";
+import BriefCarInfo from "../components/BriefCarInfo";
+import MotorSpecs from "../components/MotorSpecs";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     let {car_id} = useParams()
@@ -22,218 +24,129 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     return (
         <>
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
+            <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
 
-            {car.car_specs && <section className="Section-model">
-                <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
-                <div>
-                    <section>
-                        {/*<div className="Container">*/}
-                        <div className="car_model">
-                            <img src="https://placehold.co/960x450" alt="carrera" className="car_img"/>
-                            <div className="car_name">
-                                911 Carrera
+            <section className="Section-model">
+                <BriefCarInfo car={car}/>
+                <section className={"container-fluid"}>
+                    <div className="car_specs d-flex">
+                        <div className="car_details flex-shrink-0">
+                            <div>
+                                <p className="tech_sp">Technical Specs</p>
                             </div>
-                            <div className="car_model_price">
-                                From $ {(car.price / 1000).toFixed(3).toString().replace(".", ",")}
+
+                            <div>
+                                {car.car_specs && <MotorSpecs motor_specs={car.car_specs.motor_specs}/>}
+
+                                <div style={{width: "95%"}}>
+                                    <p className="per">Performance</p>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Top track speed (with summer tires)</span>
+                                    </div>
+                                    <div className="detail-value">
+                                        {/*<span>{pm_specs.top_track_speed} mph</span>*/}
+                                    </div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>0 - 60 mph</span></div>
+                                    <div className="detail-value">
+                                        {/*<span>{pm_specs.zero_to_100_kmh}</span>*/}
+                                    </div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>0 - 60 mph with Sport Chrono Package</span>
+                                    </div>
+                                    <div className="detail-value">
+                                        {/*<span>{car.car_specs.performance_specs.zero_to_100_mph}</span>*/}
+                                    </div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div style={{width: "95%"}}>
+                                    <p className="per">Body</p>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Length</span></div>
+                                    <div className="detail-value"><span>177.9 in</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Width w/ mirrors folded</span></div>
+                                    <div className="detail-value"><span>72.9 in</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Width</span></div>
+                                    <div className="detail-value"><span>79.7 in</span></div>
+                                </div>
+                                <div style={{width: "90"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Height</span></div>
+                                    <div className="detail-value"><span>51.1 in</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Wheelbase</span></div>
+                                    <div className="detail-value"><span>96.5 in</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Turning circle diameter</span></div>
+                                    <div className="detail-value"><span>36.8 ft</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Curb weight</span></div>
+                                    <div className="detail-value"><span>3,354 lb</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Gross Vehicle Weight Rating (GVWR)</span>
+                                    </div>
+                                    <div className="detail-value"><span>4,321 lb</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
+                                <div className="detail-card">
+                                    <div className="detail-name"><span>Maximum load</span></div>
+                                    <div className="detail-value"><span>967 lb</span></div>
+                                </div>
+                                <div style={{width: "90%"}}>
+                                    <hr/>
+                                </div>
                             </div>
                         </div>
-                        {/*</div>*/}
-                    </section>
 
-                    <section className={"container-fluid"}>
-                        <div className="car_specs d-flex">
-                            <div className="car_details flex-shrink-0">
-                                <div>
-                                    <p className="tech_sp">Technical Specs</p>
-                                </div>
-
-                                <div>
-                                    <div style={{width: "95%"}}>
-                                        <p className="per">Motor</p>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Bore</span>
-                                        </div>
-                                        <div className="detail-value"><span>{car.car_specs.motor_specs.bore}</span>
-                                        </div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Stroke</span>
-                                        </div>
-                                        <div className="detail-value"><span>76.4 mm</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Displacement</span>
-                                        </div>
-                                        <div className="detail-value"><span>2,981 cc</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. power</span>
-                                        </div>
-                                        <div className="detail-value"><span>379 hp</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. power at rpm</span>
-                                        </div>
-                                        <div className="detail-value"><span>6,500 rpm</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. engine speed</span>
-                                        </div>
-                                        <div className="detail-value"><span>7,500 rpm</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. torque</span>
-                                        </div>
-                                        <div className="detail-value"><span>331 lb-ft</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. torque at rpm</span>
-                                        </div>
-                                        <div className="detail-value"><span>1,950 - 5,000 rpm</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Max. power per liter</span>
-                                        </div>
-                                        <div className="detail-value"><span>126.3 hp/l</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-
-                                    <div style={{width: "95%"}}>
-                                        <p className="per">Performance</p>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Top track speed (with summer tires)</span>
-                                        </div>
-                                        <div className="detail-value">
-                                            {/*<span>{pm_specs.top_track_speed} mph</span>*/}
-                                        </div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>0 - 60 mph</span></div>
-                                        <div className="detail-value">
-                                            {/*<span>{pm_specs.zero_to_100_kmh}</span>*/}
-                                        </div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>0 - 60 mph with Sport Chrono Package</span>
-                                        </div>
-                                        <div className="detail-value">
-                                            {/*<span>{car.car_specs.performance_specs.zero_to_100_mph}</span>*/}
-                                        </div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div style={{width: "95%"}}>
-                                        <p className="per">Body</p>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Length</span></div>
-                                        <div className="detail-value"><span>177.9 in</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Width w/ mirrors folded</span></div>
-                                        <div className="detail-value"><span>72.9 in</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Width</span></div>
-                                        <div className="detail-value"><span>79.7 in</span></div>
-                                    </div>
-                                    <div style={{width: "90"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Height</span></div>
-                                        <div className="detail-value"><span>51.1 in</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Wheelbase</span></div>
-                                        <div className="detail-value"><span>96.5 in</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Turning circle diameter</span></div>
-                                        <div className="detail-value"><span>36.8 ft</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Curb weight</span></div>
-                                        <div className="detail-value"><span>3,354 lb</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Gross Vehicle Weight Rating (GVWR)</span>
-                                        </div>
-                                        <div className="detail-value"><span>4,321 lb</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                    <div className="detail-card">
-                                        <div className="detail-name"><span>Maximum load</span></div>
-                                        <div className="detail-value"><span>967 lb</span></div>
-                                    </div>
-                                    <div style={{width: "90%"}}>
-                                        <hr/>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="car_inform flex-grow-1 ms-3 container">
+                        <div className="car_inform flex-grow-1 ms-3 container">
+                            <div className="image">
                                 <svg viewBox="0 0 303.57 136.88" role="img"
                                      aria-label="Porsche 911 Carrera technical drawing top view."
                                      xmlns="http://www.w3.org/2000/svg">
@@ -555,125 +468,126 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                             strokeWidth=".28" transform="translate(-5.63 -8.73)"></path>
                                     </g>
                                 </svg>
+                            </div>
 
-                                <div className="top-left">
-                                    <span>Height</span>
-                                    <br/>
-                                    <span className="bold-text">51.1 in</span>
-                                </div>
-                                <div className="top-right">
-                                    <span>Width w/ mirrors folded</span>
-                                    <br/>
-                                    <span className="bold-text">72.9 in</span>
-                                </div>
-                                <div className="bottom-left">
-                                    <span>Wheelbase</span>
-                                    <br/>
-                                    <span className="bold-text">96.5 in</span>
-                                </div>
-                                <div className="bottom-right">
-                                    <span>Length</span>
-                                    <br/>
-                                    <span className="bold-text">177.9 in</span>
-                                </div>
+
+                            <div className="top-left">
+                                <span>Height</span>
+                                <br/>
+                                <span className="bold-text">51.1 in</span>
+                            </div>
+                            <div className="top-right">
+                                <span>Width w/ mirrors folded</span>
+                                <br/>
+                                <span className="bold-text">72.9 in</span>
+                            </div>
+                            <div className="bottom-left">
+                                <span>Wheelbase</span>
+                                <br/>
+                                <span className="bold-text">96.5 in</span>
+                            </div>
+                            <div className="bottom-right">
+                                <span>Length</span>
+                                <br/>
+                                <span className="bold-text">177.9 in</span>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section>
-                        <div className="hl">
-                            <p className="tech_sp_hl">911 Carrera Highlights</p>
-                            <img src="https://placehold.co/1234x412" alt="carrera_t" className="img_hl"/>
+                <section>
+                    <div className="hl">
+                        <p className="tech_sp_hl">911 Carrera Highlights</p>
+                        <img src="https://placehold.co/1234x412" alt="carrera_t" className="img_hl"/>
 
-                            <div className="Lorem">
-                                <p className="bold-text_hl">Weight reduction</p>
-                                <p>The 911 Carrera T has a sportier design thanks to its reduced weight. Simple but
-                                    effective measures were taken for these savings, like lightweight glass, the
-                                    removal of the rear seat assembly and less sound insulation.</p>
-                            </div>
-                            <div className="Lorem">
-                                <p className="bold-text_hl">Sport Seats Plus</p>
-                                <p>The upholstery of the seat cushion and backrest of the Sport Seats Plus is firmer
-                                    and sportier, and they offer even better lateral support compared to standard Sport
-                                    Seats. The seats are covered with smooth leather, the seat centers with Sport-Tex.
-                                    The headrests bring even more highlights, available with embroidered '911' logo or
-                                    optionally with an embossed Porsche Crest.</p>
-                            </div>
-                            <div className="Lorem">
-                                <p className="bold-text_hl">PASM Sport Suspension</p>
-                                <p>With PASM Sport Suspension (Lowered 10mm), the body is lowered by a further 10mm
-                                    (0.39 inches) compared to the PASM chassis. The springs are harder and shorter, the
-                                    anti-roll bars on the front and rear axles are stiffer. The spring rates have been
-                                    significantly raised, making the 911 Carrera T even sportier on the road.</p>
-                            </div>
-                            <div className="Lorem">
-                                <p className="bold-text_hl">20/21-inch Carrera S wheels</p>
-                                <p>The 911 Carrera T stands on 20/21-inch Carrera S wheels in a 10-spoke design,
-                                    painted in Titanium Gray (High Gloss). Made of lightweight alloy, of course. The
-                                    wheels and tires on the rear axle are wider and larger than those at the front.
-                                    While the broader contact surface optimizes performance, the larger diameter of the
-                                    rear wheels increases stability and comfort.</p>
-                            </div>
-                            <div className="Lorem">
-                                <p className="bold-text_hl">GT Sport Steering Wheel</p>
-                                <p>The emotions of motorsport in your hands: with a thumb rest and center top marking
-                                    as well as spoke trims in a unique design, the Multifunction GT Sport Steering
-                                    Wheel makes clear reference to the motorsport genes of the 911.</p>
-                            </div>
+                        <div className="Lorem">
+                            <p className="bold-text_hl">Weight reduction</p>
+                            <p>The 911 Carrera T has a sportier design thanks to its reduced weight. Simple but
+                                effective measures were taken for these savings, like lightweight glass, the
+                                removal of the rear seat assembly and less sound insulation.</p>
                         </div>
-                    </section>
+                        <div className="Lorem">
+                            <p className="bold-text_hl">Sport Seats Plus</p>
+                            <p>The upholstery of the seat cushion and backrest of the Sport Seats Plus is firmer
+                                and sportier, and they offer even better lateral support compared to standard Sport
+                                Seats. The seats are covered with smooth leather, the seat centers with Sport-Tex.
+                                The headrests bring even more highlights, available with embroidered '911' logo or
+                                optionally with an embossed Porsche Crest.</p>
+                        </div>
+                        <div className="Lorem">
+                            <p className="bold-text_hl">PASM Sport Suspension</p>
+                            <p>With PASM Sport Suspension (Lowered 10mm), the body is lowered by a further 10mm
+                                (0.39 inches) compared to the PASM chassis. The springs are harder and shorter, the
+                                anti-roll bars on the front and rear axles are stiffer. The spring rates have been
+                                significantly raised, making the 911 Carrera T even sportier on the road.</p>
+                        </div>
+                        <div className="Lorem">
+                            <p className="bold-text_hl">20/21-inch Carrera S wheels</p>
+                            <p>The 911 Carrera T stands on 20/21-inch Carrera S wheels in a 10-spoke design,
+                                painted in Titanium Gray (High Gloss). Made of lightweight alloy, of course. The
+                                wheels and tires on the rear axle are wider and larger than those at the front.
+                                While the broader contact surface optimizes performance, the larger diameter of the
+                                rear wheels increases stability and comfort.</p>
+                        </div>
+                        <div className="Lorem">
+                            <p className="bold-text_hl">GT Sport Steering Wheel</p>
+                            <p>The emotions of motorsport in your hands: with a thumb rest and center top marking
+                                as well as spoke trims in a unique design, the Multifunction GT Sport Steering
+                                Wheel makes clear reference to the motorsport genes of the 911.</p>
+                        </div>
+                    </div>
+                </section>
 
-                    <section>
-                        <div>
-                            <div className="container_new">
-                                <img src={porsche_normal} alt="coupe_carrera" className="porsche_normal"/>
-                                {/*<img src="https://placehold.co/1440x720" alt="coupe_carrera" className="porsche_normal"/>*/}
+                <section>
+                    <div>
+                        <div className="container_new">
+                            <img src={porsche_normal} alt="coupe_carrera" className="porsche_normal"/>
+                            {/*<img src="https://placehold.co/1440x720" alt="coupe_carrera" className="porsche_normal"/>*/}
 
-                                <div className="top-left_new" style={{width: "40%"}}>
-                                    <p className="body_shapes">Car body shapes</p>
-                                    <span className="bold-text_coupe">Coupé</span>
-                                    <div className="line">
-                                    </div>
-                                    <span className="bold-text_new">The Coupé version of the 911 embodies Porsche DNA in
+                            <div className="top-left_new" style={{width: "40%"}}>
+                                <p className="body_shapes">Car body shapes</p>
+                                <span className="bold-text_coupe">Coupé</span>
+                                <div className="line">
+                                </div>
+                                <span className="bold-text_new">The Coupé version of the 911 embodies Porsche DNA in
                                         its purest form: the long, flat bonnet, the steeply inclined windscreen. And the
                                         roof line that slopes gently down towards the rear, already characterized the
                                         original 911.</span>
-                                </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section>
-                        <div>
-                            <p className="gallery">Gallery</p>
-                            <div className="container_gallery">
-                                <div className="box_1">
-                                    <div className="gitem">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
-                                    <div className="gitem">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
-                                    <div className="gitem">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
+                <section>
+                    <div>
+                        <p className="gallery">Gallery</p>
+                        <div className="container_gallery">
+                            <div className="box_1">
+                                <div className="gitem">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
                                 </div>
-                                <div className="box_1">
-                                    <div className="gitem_2">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
-                                    <div className="gitem_2">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
-                                    <div className="gitem_2">
-                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                    </div>
+                                <div className="gitem">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                </div>
+                                <div className="gitem">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                </div>
+                            </div>
+                            <div className="box_1">
+                                <div className="gitem_2">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                </div>
+                                <div className="gitem_2">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                </div>
+                                <div className="gitem_2">
+                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
-            </section>}
+                    </div>
+                </section>
+            </section>
 
             <Footer/>
         </>

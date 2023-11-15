@@ -8,4 +8,4 @@ const ModelCard = (url, image_url, slug) => {
     )
 }
 
-export default ModelCard
+export default ModelCard;
