@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {useFetching} from "../hooks/UseFetching";
 import CarService from "../API/CarService";
 import porsche_normal from "../porsche-normal.webp";
+import Footer from "../components/UI/Footer/Footer";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     let {car_id} = useParams()
@@ -22,24 +23,24 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
         <>
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
 
-            {car && <section className="Section-model">
+            {car.car_specs && <section className="Section-model">
                 <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
-                <div className="Container">
+                <div>
                     <section>
                         {/*<div className="Container">*/}
-                            <div className="car_model">
-                                <img src="https://placehold.co/960x450" alt="carrera" className="car_img"/>
-                                <div className="car_name">
-                                    911 Carrera
-                                </div>
-                                <div className="car_model_price">
-                                    From $ {(car.price / 1000).toFixed(3).toString().replace(".", ",")}
-                                </div>
+                        <div className="car_model">
+                            <img src="https://placehold.co/960x450" alt="carrera" className="car_img"/>
+                            <div className="car_name">
+                                911 Carrera
                             </div>
+                            <div className="car_model_price">
+                                From $ {(car.price / 1000).toFixed(3).toString().replace(".", ",")}
+                            </div>
+                        </div>
                         {/*</div>*/}
                     </section>
 
-                     <section>
+                    <section className={"container-fluid"}>
                         <div className="car_specs d-flex">
                             <div className="car_details flex-shrink-0">
                                 <div>
@@ -54,7 +55,8 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     <div className="detail-card">
                                         <div className="detail-name"><span>Bore</span>
                                         </div>
-                                        <div className="detail-value"><span>{car.car_specs.motor_specs.bore}</span></div>
+                                        <div className="detail-value"><span>{car.car_specs.motor_specs.bore}</span>
+                                        </div>
                                     </div>
                                     <div style={{width: "90%"}}>
                                         <hr/>
@@ -98,7 +100,8 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     </div>
                                     <div style={{width: "90%"}}>
                                         <hr/>
-                                    </div><div className="detail-card">
+                                    </div>
+                                    <div className="detail-card">
                                         <div className="detail-name"><span>Max. torque</span>
                                         </div>
                                         <div className="detail-value"><span>331 lb-ft</span></div>
@@ -620,7 +623,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                         </div>
                     </section>
 
-                    <sectoin>
+                    <section>
                         <div>
                             <div className="container_new">
                                 <img src={porsche_normal} alt="coupe_carrera" className="porsche_normal"/>
@@ -629,7 +632,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                 <div className="top-left_new" style={{width: "40%"}}>
                                     <p className="body_shapes">Car body shapes</p>
                                     <span className="bold-text_coupe">Coupé</span>
-                                    <div  className="line">
+                                    <div className="line">
                                     </div>
                                     <span className="bold-text_new">The Coupé version of the 911 embodies Porsche DNA in
                                         its purest form: the long, flat bonnet, the steeply inclined windscreen. And the
@@ -638,15 +641,41 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                 </div>
                             </div>
                         </div>
-                    </sectoin>
+                    </section>
 
                     <section>
                         <div>
                             <p className="gallery">Gallery</p>
+                            <div className="container_gallery">
+                                <div className="box_1">
+                                    <div className="gitem">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                    <div className="gitem">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                    <div className="gitem">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                </div>
+                                <div className="box_1">
+                                    <div className="gitem_2">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                    <div className="gitem_2">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                    <div className="gitem_2">
+                                        <img src="https://placehold.co/1000x500" alt="img_1"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
             </section>}
+
+            <Footer/>
         </>
     )
 }
