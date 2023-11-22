@@ -17,7 +17,6 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
         let response = await CarService.get_car_by_id(car_id);
         setCar(response)
     });
-    console.log(car)
     useEffect(() => {
         fetchingCar().catch(e => console.log(e))
     }, [car_id]);
