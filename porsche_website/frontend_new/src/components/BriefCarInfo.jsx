@@ -1,10 +1,10 @@
 import React from "react";
 
-const BriefCarInfo = ({car}) => {
+const BriefCarInfo = ({car, category}) => {
     return (
         <section>
             <div className="car_model">
-                <img src="https://placehold.co/960x450" alt={car.slug} className="car_img"/>
+                <img src={`/assets/cars/${car.slug}.webp`} alt={car.slug} className="car_img"/>
                 <div className="car_name">
                     {car.name}
                 </div>

@@ -30,9 +30,21 @@ export default class CarService {
             )
         })
     }
-    static get_car_by_id(car_id) {
+    static get_car_by_id(car_slug) {
         return new Promise((resolve, reject) => {
-            axios.get(`${serverPath}/cars/${car_id}`).then((res) => {
+            axios.get(`${serverPath}/cars/${car_slug}`).then((res) => {
+                    resolve(res.data)
+                }
+            ).catch((err) => {
+                    console.error(err)
+                    reject(err)
+                }
+            )
+        })
+    }
+    static get_car_hightlights(car_slug) {
+        return new Promise((resolve, reject) => {
+            axios.get(`${serverPath}/cars/${car_slug}/highlights`).then((res) => {
                     resolve(res.data)
                 }
             ).catch((err) => {

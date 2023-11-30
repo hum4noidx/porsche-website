@@ -8,6 +8,7 @@ import porsche_normal from "../porsche-normal.webp";
 import Footer from "../components/UI/Footer/Footer";
 import BriefCarInfo from "../components/BriefCarInfo";
 import MotorSpecs from "../components/MotorSpecs";
+import CarHighlightList from "../components/CarHighlightList";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     let {car_id} = useParams()
@@ -26,7 +27,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
             <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
 
             <section className="Section-model">
-                <BriefCarInfo car={car}/>
+                <BriefCarInfo car={car} category={car_id}/>
                 <section className={"container-fluid"}>
                     <div className="car_specs d-flex">
                         <div className="car_details flex-shrink-0">
@@ -468,8 +469,6 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     </g>
                                 </svg>
                             </div>
-
-
                             <div className="top-left">
                                 <span>Height</span>
                                 <br/>
@@ -494,48 +493,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                     </div>
                 </section>
 
-                <section>
-                    <div className="hl">
-                        <p className="tech_sp_hl">911 Carrera Highlights</p>
-                        <img src="https://placehold.co/1234x412" alt="carrera_t" className="img_hl"/>
-
-                        <div className="Lorem">
-                            <p className="bold-text_hl">Weight reduction</p>
-                            <p>The 911 Carrera T has a sportier design thanks to its reduced weight. Simple but
-                                effective measures were taken for these savings, like lightweight glass, the
-                                removal of the rear seat assembly and less sound insulation.</p>
-                        </div>
-                        <div className="Lorem">
-                            <p className="bold-text_hl">Sport Seats Plus</p>
-                            <p>The upholstery of the seat cushion and backrest of the Sport Seats Plus is firmer
-                                and sportier, and they offer even better lateral support compared to standard Sport
-                                Seats. The seats are covered with smooth leather, the seat centers with Sport-Tex.
-                                The headrests bring even more highlights, available with embroidered '911' logo or
-                                optionally with an embossed Porsche Crest.</p>
-                        </div>
-                        <div className="Lorem">
-                            <p className="bold-text_hl">PASM Sport Suspension</p>
-                            <p>With PASM Sport Suspension (Lowered 10mm), the body is lowered by a further 10mm
-                                (0.39 inches) compared to the PASM chassis. The springs are harder and shorter, the
-                                anti-roll bars on the front and rear axles are stiffer. The spring rates have been
-                                significantly raised, making the 911 Carrera T even sportier on the road.</p>
-                        </div>
-                        <div className="Lorem">
-                            <p className="bold-text_hl">20/21-inch Carrera S wheels</p>
-                            <p>The 911 Carrera T stands on 20/21-inch Carrera S wheels in a 10-spoke design,
-                                painted in Titanium Gray (High Gloss). Made of lightweight alloy, of course. The
-                                wheels and tires on the rear axle are wider and larger than those at the front.
-                                While the broader contact surface optimizes performance, the larger diameter of the
-                                rear wheels increases stability and comfort.</p>
-                        </div>
-                        <div className="Lorem">
-                            <p className="bold-text_hl">GT Sport Steering Wheel</p>
-                            <p>The emotions of motorsport in your hands: with a thumb rest and center top marking
-                                as well as spoke trims in a unique design, the Multifunction GT Sport Steering
-                                Wheel makes clear reference to the motorsport genes of the 911.</p>
-                        </div>
-                    </div>
-                </section>
+                <CarHighlightList car_slug={car_id}/>
 
                 <section>
                     <div>

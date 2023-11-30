@@ -5,7 +5,7 @@ const SmallCar = ({car, category}) => {
     return (
         <div className="model">
             <Link to={`/models/${category}/${car.slug}`}>
-                <img src={`/assets/cars/${category}/${car.slug}.webp`} alt={car.slug}/>
+                <img src={`/assets/cars/${car.slug}.webp`} alt={car.slug}/>
             </Link>
             <div className="model_name">
                 {car.name}

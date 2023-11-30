@@ -175,7 +175,7 @@ h2 {
     font-size: 36px;
     font-weight: 700;
     font-family: "Porsche Next", sans-serif;
-    margin-left: 372px;
+    /*margin-left: 372px;*/
     margin-top: 12px;
 }
 
@@ -184,11 +184,10 @@ h2 {
     justify-content: space-around;
     flex-flow: wrap;
     align-content: flex-start;
-    margin-left: 330px;
     margin-top: 12px;
 }
 .model {
-    flex-basis: 33.33333%;
+    flex-basis: 20%;
 }
 .Section_model {
     height: 110vh;
@@ -395,6 +394,7 @@ h2 {
 }
 
 .porsche_normal {
+    width: 100%;
     max-width: 100%;
 }
 

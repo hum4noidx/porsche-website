@@ -26,7 +26,7 @@ const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
                 <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
                 <div className="Container">
                     <h1>Model overview</h1>
-                    <h2>{carsCategory.name}</h2>
+                    <p className="fs-2 ms-1pt">{carsCategory.name} models</p>
                     <SmallCarList cars={carsCategory.cars} category={model_id}/>
                 </div>
 
