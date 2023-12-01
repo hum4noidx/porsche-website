@@ -8,6 +8,9 @@ import porsche_normal from "../porsche-normal.webp";
 import Footer from "../components/UI/Footer/Footer";
 import BriefCarInfo from "../components/BriefCarInfo";
 import MotorSpecs from "../components/MotorSpecs";
+import PerformanceSpecs from "../components/Performance";
+import BodySpecs from "../components/Body";
+import BaseBody from "../components/BaseBody";
 import CarHighlightList from "../components/CarHighlightList";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
@@ -38,110 +41,9 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                             <div>
                                 {car.car_specs && <MotorSpecs motor_specs={car.car_specs.motor_specs}/>}
 
-                                <div style={{width: "95%"}}>
-                                    <p className="per">Performance</p>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Top track speed (with summer tires)</span>
-                                    </div>
-                                    <div className="detail-value">
-                                        {/*<span>{pm_specs.top_track_speed} mph</span>*/}
-                                    </div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>0 - 60 mph</span></div>
-                                    <div className="detail-value">
-                                        {/*<span>{pm_specs.zero_to_100_kmh}</span>*/}
-                                    </div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>0 - 60 mph with Sport Chrono Package</span>
-                                    </div>
-                                    <div className="detail-value">
-                                        {/*<span>{car.car_specs.performance_specs.zero_to_100_mph}</span>*/}
-                                    </div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                            </div>
+                                {car.car_specs && <PerformanceSpecs performance_specs={car.car_specs.performance_specs}/>}
 
-                            <div>
-                                <div style={{width: "95%"}}>
-                                    <p className="per">Body</p>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Length</span></div>
-                                    <div className="detail-value"><span>177.9 in</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Width w/ mirrors folded</span></div>
-                                    <div className="detail-value"><span>72.9 in</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Width</span></div>
-                                    <div className="detail-value"><span>79.7 in</span></div>
-                                </div>
-                                <div style={{width: "90"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Height</span></div>
-                                    <div className="detail-value"><span>51.1 in</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Wheelbase</span></div>
-                                    <div className="detail-value"><span>96.5 in</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Turning circle diameter</span></div>
-                                    <div className="detail-value"><span>36.8 ft</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Curb weight</span></div>
-                                    <div className="detail-value"><span>3,354 lb</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Gross Vehicle Weight Rating (GVWR)</span>
-                                    </div>
-                                    <div className="detail-value"><span>4,321 lb</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
-                                <div className="detail-card">
-                                    <div className="detail-name"><span>Maximum load</span></div>
-                                    <div className="detail-value"><span>967 lb</span></div>
-                                </div>
-                                <div style={{width: "90%"}}>
-                                    <hr/>
-                                </div>
+                                {car.car_specs && <BodySpecs body_specs={car.car_specs.body_specs}/>}
                             </div>
                         </div>
 
@@ -469,26 +371,8 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                                     </g>
                                 </svg>
                             </div>
-                            <div className="top-left">
-                                <span>Height</span>
-                                <br/>
-                                <span className="bold-text">51.1 in</span>
-                            </div>
-                            <div className="top-right">
-                                <span>Width w/ mirrors folded</span>
-                                <br/>
-                                <span className="bold-text">72.9 in</span>
-                            </div>
-                            <div className="bottom-left">
-                                <span>Wheelbase</span>
-                                <br/>
-                                <span className="bold-text">96.5 in</span>
-                            </div>
-                            <div className="bottom-right">
-                                <span>Length</span>
-                                <br/>
-                                <span className="bold-text">177.9 in</span>
-                            </div>
+
+                            {car.car_specs && <BaseBody body_specs={car.car_specs.body_specs}/>}
                         </div>
                     </div>
                 </section>

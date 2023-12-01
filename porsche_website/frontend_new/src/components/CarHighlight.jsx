@@ -5,9 +5,7 @@ const CarHighlight = ({highlight}) => {
     console.log(highlight)
     return (
         <>
-
             <div className="Lorem">
-
                 <p className="bold-text_hl">{parse(highlight.heading)}</p>
                 <p>{parse(highlight.paragraph)}</p>
             </div>
