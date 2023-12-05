@@ -54,4 +54,16 @@ export default class CarService {
             )
         })
     }
+    static get_car_gallery(car_slug) {
+        return new Promise((resolve, reject) => {
+            axios.get(`${serverPath}/cars/${car_slug}/gallery`).then((res) => {
+                    resolve(res.data)
+                }
+            ).catch((err) => {
+                    console.error(err)
+                    reject(err)
+                }
+            )
+        })
+    }
 }

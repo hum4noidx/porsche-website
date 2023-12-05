@@ -13,6 +13,7 @@ import BodySpecs from "../components/Body";
 import BaseBody from "../components/BaseBody";
 import CarHighlightList from "../components/CarHighlightList";
 import parse from "html-react-parser";
+import CarGallery from "../components/CarGallery";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     let {car_id} = useParams()
@@ -78,35 +79,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                     </div>
                 </section>
 
-                <section>
-                    <div>
-                        <p className="gallery">Gallery</p>
-                        <div className="container_gallery">
-                            <div className="box_1">
-                                <div className="gitem">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                                <div className="gitem">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                                <div className="gitem">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                            </div>
-                            <div className="box_1">
-                                <div className="gitem_2">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                                <div className="gitem_2">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                                <div className="gitem_2">
-                                    <img src="https://placehold.co/1000x500" alt="img_1"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <CarGallery car_slug={car_id}/>
             </section>
 
             <Footer/>
