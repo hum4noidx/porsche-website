@@ -52,11 +52,13 @@
     flex-shrink: 0;
     padding: 0 80px 0 0;
 }
+
 .model img {
     width: 250px;
     object-fit: cover;
     object-position: center;
 }
+
 .category_car {
     margin-bottom: 5px;
     object-fit: scale-down;
@@ -186,12 +188,34 @@ h2 {
     align-content: flex-start;
     margin-top: 12px;
 }
+
 .model {
     flex-basis: 20%;
 }
+
 .Section_model {
     height: 110vh;
     background-color: #FFFFFF;
+}
+
+.specs_section {
+    background: rgba(0, 0, 0, 0.9);
+    padding-bottom: 50px;
+    color: white;
+
+}
+
+.m-364-background-image {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: auto;
+    min-height: none;
+    width: 100%;
+    transform: translate3d(0, -50%, 0);
+    object-fit: cover
 }
 
 .car_model {
@@ -204,7 +228,6 @@ h2 {
 }
 
 .car_name {
-    margin-top: 10px;
     font-size: 40px;
     text-align: center;
     font-weight: bold;
@@ -460,6 +483,7 @@ h2 {
     flex-basis: 50%;
     height: 33.333333%;
 }
+
 .box_1 .gitem_2 {
     flex-basis: 50%;
     height: 33.333333%;

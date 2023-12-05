@@ -1,10 +1,11 @@
 import React from "react";
 
 const BriefCarInfo = ({car, category}) => {
+    console.log(car)
     return (
-        <section>
+        <section className="specs_section">
             <div className="car_model">
-                <img src={`/assets/cars/${car.slug}.webp`} alt={car.slug} className="car_img"/>
+                <img src={car.overview_photo} alt={car.slug} className="car_img"/>
                 <div className="car_name">
                     {car.name}
                 </div>
