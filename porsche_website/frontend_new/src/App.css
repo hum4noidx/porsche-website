@@ -138,7 +138,7 @@
 
 .Section-main {
     height: 110vh;
-    background-image: url(../src/assets/taycan-main.png);
+    background-image: url("https://images-porsche.imgix.net/-/media/C0E40AED1AFA4032B81264466DEC6BBC_F7855B451368485FAF8EA90922143D24_EP21Q2DPE0001-taycan-turbo-s-charging?w=1800&q=45&crop=faces%2Centropy%2Cedges&auto=format");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -394,7 +394,7 @@ h2 {
 }
 
 .hl {
-    padding: 10px 16px 360px 16px;
+    padding: 10px 16px 0 16px;
 }
 
 .tech_sp_hl {
@@ -409,9 +409,10 @@ h2 {
     margin-top: 16px;
     width: 100%;
     height: 100%;
+    max-width: 1400px;
 }
 
-.Lorem {
+.highlight-card {
     padding: 24px 18px 18px 18px;
     font-size: 16px;
     font-family: "Porsche Next", sans-serif;

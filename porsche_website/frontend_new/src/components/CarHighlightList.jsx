@@ -20,7 +20,6 @@ const CarHighlightList = ({car_slug}) => {
     if (cardsError) {
         return <div>{cardsError}</div>
     }
-    console.log(highlights)
     if (!highlights || highlights.length === 0) {
         return
     }
@@ -33,8 +32,10 @@ const CarHighlightList = ({car_slug}) => {
         <section className="container-fluid">
             <p className="tech_sp_hl">911 Carrera Highlights</p>
             <div className="hl">
-                <img src={highlights[0].image_url} alt="carrera_t" className="img_hl"/>
-                {listCarHighlights}
+                <img src={highlights[0].image_url} alt="carrera_t" className="img-fluid w-100"/>
+                <div className="card-group">
+                    {listCarHighlights}
+                </div>
             </div>
         </section>
     )

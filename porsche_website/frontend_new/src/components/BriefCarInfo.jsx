@@ -3,7 +3,7 @@ import React from "react";
 const BriefCarInfo = ({car, category}) => {
     console.log(car)
     return (
-        <section className="specs_section">
+        <section className="specs_section container-fluid">
             <div className="car_model">
                 <img src={car.overview_photo} alt={car.slug} className="car_img"/>
                 <div className="car_name">

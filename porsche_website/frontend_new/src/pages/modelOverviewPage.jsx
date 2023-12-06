@@ -6,6 +6,7 @@ import SmallCarList from "../components/SmallCarList";
 import CarService from "../API/CarService";
 import {useFetching} from "../hooks/UseFetching";
 
+
 const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
     let {model_id} = useParams()
 
@@ -17,7 +18,9 @@ const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
     useEffect(() => {
         fetchingCarsCategory().catch(e => console.log(e))
     }, [model_id]);
-
+    if (!carsCategory || carsCategory.length === 0) {
+        return <div>Not Found!</div>
+    }
     return (
         <>
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSideBar}/>
@@ -26,7 +29,7 @@ const ModelsPage = ({toggleSideBar, isSidebarOpen}) => {
                 <Header toggleSidebar={toggleSideBar} color={'#000000'}/>
                 <div className="Container">
                     <h1>Model overview</h1>
-                    <p className="fs-2 ms-1pt">{carsCategory.name} models</p>
+                    {carsCategory.name && <p className="fs-2 ms-1pt">{carsCategory.name} models</p>}
                     <SmallCarList cars={carsCategory.cars} category={model_id}/>
                 </div>
 
