@@ -8,7 +8,7 @@ import Footer from "../components/UI/Footer/Footer";
 import BriefCarInfo from "../components/BriefCarInfo";
 import CarHighlightList from "../components/CarHighlights/CarHighlightList.jsx";
 import CarGallery from "../components/CarGallery";
-import CarSpecs from "../components/CarSpecs";
+import CarSpecs from "../components/CarSpecs/CarSpecs";
 
 const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
     let {car_id} = useParams()

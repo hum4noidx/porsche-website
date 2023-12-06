@@ -1,4 +1,6 @@
 import React from "react";
+import styles from './TechnicalSpecs.module.css';
+
 
 const PerformanceSpecs = ({performance_specs}) => {
     let perform = performance_specs[0]
@@ -13,9 +15,9 @@ const PerformanceSpecs = ({performance_specs}) => {
         specPerformName = specPerformName.charAt(0).toUpperCase() + specPerformName.slice(1)
         return (
             <>
-                <div className="detail-card" key={index}>
-                    <div className="detail-name"><span>{specPerformName}</span></div>
-                    <div className="detail-value"><span>{performValues[index]}</span></div>
+                <div className={styles.detail_card} key={index}>
+                    <div className={styles.detail_name}><span>{specPerformName}</span></div>
+                    <div className={styles.detail_value}><span>{performValues[index]}</span></div>
                 </div>
                 <div style={{width: "90%"}}>
                     <hr/>
@@ -27,7 +29,7 @@ const PerformanceSpecs = ({performance_specs}) => {
     return (
         <>
             <div style={{width: "95%"}}>
-                <p className="per">Performance</p>
+                <p className={styles.per}>Performance</p>
                 <hr/>
             </div>
             {listPerformSpecs}

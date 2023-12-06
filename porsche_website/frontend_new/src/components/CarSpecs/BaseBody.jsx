@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './CarSpecs.module.css';
 
 const MainBodySpecs = ({body_specs}) => {
     let body = body_specs[0]
@@ -7,25 +8,25 @@ const MainBodySpecs = ({body_specs}) => {
 
     return (
         <>
-            <div className="top-left">
+            <div className={`${styles.top_left}`}>
                 <span>Height</span>
                 <br/>
-                <span className="bold-text">{body.height}</span>
+                <span className={styles.bold_text}>{body.height}</span>
             </div>
-            <div className="top-right">
+            <div className={styles.top_right}>
                 <span>Width</span>
                 <br/>
-                <span className="bold-text">{body.width}</span>
+                <span className={styles.bold_text}>{body.width}</span>
             </div>
-            <div className="bottom-left">
+            <div className={styles.bottom_left}>
                 <span>Wheelbase</span>
                 <br/>
-                <span className="bold-text">{body.wheelbase}</span>
+                <span className={styles.bold_text}>{body.wheelbase}</span>
             </div>
-            <div className="bottom-right">
+            <div className={styles.bottom_right}>
                 <span>Length</span>
                 <br/>
-                <span className="bold-text">{body.length}</span>
+                <span className={styles.bold_text}>{body.length}</span>
             </div>
         </>
     )

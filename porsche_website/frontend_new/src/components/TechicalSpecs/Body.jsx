@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './TechnicalSpecs.module.css';
 
 const BodySpecs = ({body_specs}) => {
     let body = body_specs[0]
@@ -13,9 +14,9 @@ const BodySpecs = ({body_specs}) => {
         specBodyName = specBodyName.charAt(0).toUpperCase() + specBodyName.slice(1)
         return (
             <>
-                <div className="detail-card" key={index}>
-                    <div className="detail-name"><span>{specBodyName}</span></div>
-                    <div className="detail-value"><span>{bodyValues[index]}</span></div>
+                <div className={styles.detail_card} key={index}>
+                    <div className={styles.detail_name}><span>{specBodyName}</span></div>
+                    <div className={styles.detail_value}><span>{bodyValues[index]}</span></div>
                 </div>
                 <div style={{width: "90%"}}>
                     <hr/>
@@ -27,7 +28,7 @@ const BodySpecs = ({body_specs}) => {
     return (
         <>
             <div style={{width: "95%"}}>
-                <p className="per">Body</p>
+                <p className={styles.per}>Body</p>
                 <hr/>
             </div>
             {listBodySpecs}

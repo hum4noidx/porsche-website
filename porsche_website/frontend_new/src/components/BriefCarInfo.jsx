@@ -1,7 +1,6 @@
 import React from "react";
 
 const BriefCarInfo = ({car, category}) => {
-    console.log(car)
     return (
         <section className="specs_section container-fluid">
             <div className="car_model">

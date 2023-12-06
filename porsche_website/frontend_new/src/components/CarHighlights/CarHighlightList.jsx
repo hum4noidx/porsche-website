@@ -30,10 +30,10 @@ const CarHighlightList = ({car_slug}) => {
 
     return (
         <section className="container-fluid">
-            <p className={styles.tech_sp_hl}>911 Carrera Highlights</p>
-            <div className={styles.highlights_group}>
+            <p className={styles.tech_sp_hl}>{car_slug.charAt(0).toUpperCase() + car_slug.slice(1)} Highlights</p>
+            <div className="highlights_group">
                 <img src={highlights[0].image_url} alt={`${car_slug}_image`} className={"img-fluid w-100"}/>
-                <div className={"card-group"}>
+                <div className={styles.card_group}>
                     {listCarHighlights}
                 </div>
             </div>
