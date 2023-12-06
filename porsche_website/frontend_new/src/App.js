@@ -21,7 +21,7 @@ function App() {
                        element={<ModelsPage toggleSideBar={toggleSidebar} isSidebarOpen={isSidebarOpen}/>}/>
                 <Route path="/models/:models_id/:car_id"
                        element={<ModelPage toggleSideBar={toggleSidebar} isSidebarOpen={isSidebarOpen}/>}/>
-                <Route path="*" element={<NotFoundPage />}/>/>
+                <Route path="*" element={<NotFoundPage/>}/>/>
             </Routes>
         </BrowserRouter>
     );

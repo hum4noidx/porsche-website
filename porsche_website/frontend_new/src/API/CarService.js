@@ -18,6 +18,7 @@ export default class CarService {
             )
         })
     }
+
     static get_cars_by_category(category_id) {
         return new Promise((resolve, reject) => {
             axios.get(`${serverPath}/car_categories/${category_id}`).then((res) => {
@@ -30,6 +31,7 @@ export default class CarService {
             )
         })
     }
+
     static get_car_by_id(car_slug) {
         return new Promise((resolve, reject) => {
             axios.get(`${serverPath}/cars/${car_slug}`).then((res) => {
@@ -42,6 +44,7 @@ export default class CarService {
             )
         })
     }
+
     static get_car_hightlights(car_slug) {
         return new Promise((resolve, reject) => {
             axios.get(`${serverPath}/cars/${car_slug}/highlights`).then((res) => {
@@ -54,6 +57,7 @@ export default class CarService {
             )
         })
     }
+
     static get_car_gallery(car_slug) {
         return new Promise((resolve, reject) => {
             axios.get(`${serverPath}/cars/${car_slug}/gallery`).then((res) => {

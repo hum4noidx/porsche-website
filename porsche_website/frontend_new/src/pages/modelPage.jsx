@@ -4,15 +4,9 @@ import Sidebar from "../components/SideBar";
 import {useParams} from "react-router-dom";
 import {useFetching} from "../hooks/UseFetching";
 import CarService from "../API/CarService";
-import porsche_normal from "../porsche-normal.webp";
 import Footer from "../components/UI/Footer/Footer";
 import BriefCarInfo from "../components/BriefCarInfo";
-import MotorSpecs from "../components/MotorSpecs";
-import PerformanceSpecs from "../components/Performance";
-import BodySpecs from "../components/Body";
-import BaseBody from "../components/BaseBody";
-import CarHighlightList from "../components/CarHighlightList";
-import parse from "html-react-parser";
+import CarHighlightList from "../components/CarHighlights/CarHighlightList.jsx";
 import CarGallery from "../components/CarGallery";
 import CarSpecs from "../components/CarSpecs";
 

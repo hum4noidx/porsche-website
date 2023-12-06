@@ -19,7 +19,6 @@ const CarGallery = ({car_slug}) => {
     if (cardsError) {
         return <div>{cardsError}</div>
     }
-    console.log(photos)
     if (!photos || photos.length === 0) {
         return
     }
@@ -28,23 +27,23 @@ const CarGallery = ({car_slug}) => {
 
     return (
         <section>
-                <p className="gallery">Gallery</p>
-                <div className="container_gallery">
-                    <div className="box_1">
-                        {group1.map((img, index) => (
-                            <div className="gitem" key={index}>
-                                <img src={img.image_url} alt={`img_${index + 1}`}/>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="box_1">
-                        {group2.map((img, index) => (
-                            <div className="gitem_2" key={index + 3}>
-                                <img src={img.image_url} alt={`img_${index + 4}`}/>
-                            </div>
-                        ))}
-                    </div>
+            <p className="gallery">Gallery</p>
+            <div className="container_gallery">
+                <div className="box_1">
+                    {group1.map((img, index) => (
+                        <div className="gitem" key={index}>
+                            <img src={img.image_url} alt={`img_${index + 1}`}/>
+                        </div>
+                    ))}
                 </div>
+                <div className="box_1">
+                    {group2.map((img, index) => (
+                        <div className="gitem_2" key={index + 3}>
+                            <img src={img.image_url} alt={`img_${index + 4}`}/>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
     )
 }

@@ -1,0 +1,19 @@
+.tech_sp_hl {
+    font-weight: bold;
+    font-size: 38px;
+    margin-left: 36px;
+}
+
+.highlight_card {
+    padding: 24px 18px 18px 18px;
+    font-size: 16px;
+    font-family: "Porsche Next", sans-serif;
+    float: left;
+    width: 20%;
+    border-radius: 0 !important;
+    border: none;
+}
+
+.highlights_group {
+    padding: 10px 16px 0 16px;
+}
