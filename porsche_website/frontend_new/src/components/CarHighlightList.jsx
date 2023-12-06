@@ -33,7 +33,7 @@ const CarHighlightList = ({car_slug}) => {
         <section className="container-fluid">
             <div className="hl">
                 <p className="tech_sp_hl">911 Carrera Highlights</p>
-                <img src={"/assets/cars/carrera.webp"} alt="carrera_t" className="img_hl"/>
+                <img src={highlights[0].image_url} alt="carrera_t" className="img_hl"/>
                 {listCarHighlights}
             </div>
         </section>

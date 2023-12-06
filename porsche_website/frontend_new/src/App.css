@@ -46,6 +46,10 @@
     font-family: "Porsche Next", sans-serif;
 }
 
+.fs-2 {
+    margin-left: 60px;
+}
+
 .model-categories {
     width: 280px;
     /*height: 920px;*/
@@ -187,10 +191,12 @@ h2 {
     flex-flow: wrap;
     align-content: flex-start;
     margin-top: 12px;
+    margin-left: 60px;
+    margin-right: 0;
 }
 
 .model {
-    flex-basis: 20%;
+    flex-basis: 23%;
 }
 
 .Section_model {
@@ -388,7 +394,7 @@ h2 {
 }
 
 .hl {
-    padding: 10px 16px 16px 16px;
+    padding: 10px 16px 360px 16px;
 }
 
 .tech_sp_hl {
@@ -428,7 +434,7 @@ h2 {
 
 .top-left_new {
     position: absolute;
-    top: 480px;
+    top: 35%;
     left: 84px;
     color: #FFFFFF;
     font-family: "Porsche Next", sans-serif;
@@ -460,7 +466,7 @@ h2 {
     font-weight: bold;
     font-size: 38px;
     margin-bottom: 16px;
-    margin-top: 36px;
+    margin-top: 12px;
     margin-left: 52px;
 }
 
