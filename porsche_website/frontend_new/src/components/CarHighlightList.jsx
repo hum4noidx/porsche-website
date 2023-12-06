@@ -31,8 +31,8 @@ const CarHighlightList = ({car_slug}) => {
 
     return (
         <section className="container-fluid">
+            <p className="tech_sp_hl">911 Carrera Highlights</p>
             <div className="hl">
-                <p className="tech_sp_hl">911 Carrera Highlights</p>
                 <img src={highlights[0].image_url} alt="carrera_t" className="img_hl"/>
                 {listCarHighlights}
             </div>

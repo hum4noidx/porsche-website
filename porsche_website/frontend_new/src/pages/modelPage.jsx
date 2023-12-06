@@ -33,7 +33,7 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
 
             <section className="Section-model">
                 <BriefCarInfo car={car} category={car_id}/>
-                <section className={"container-fluid"}>
+                <section className="container-fluid">
                     <div className="car_specs d-flex">
                         <div className="car_details flex-shrink-0">
                             <div>
@@ -60,24 +60,6 @@ const ModelPage = ({toggleSideBar, isSidebarOpen}) => {
                 </section>
 
                 <CarHighlightList car_slug={car_id}/>
-
-                {/*<section>*/}
-                {/*    <div>*/}
-                {/*        <div className="container_new">*/}
-                {/*            <img src={porsche_normal} alt="coupe_carrera" className="porsche_normal"/>*/}
-                {/*            <div className="top-left_new" style={{width: "40%"}}>*/}
-                {/*                <p className="body_shapes">Car body shapes</p>*/}
-                {/*                <span className="bold-text_coupe">Coupé</span>*/}
-                {/*                <div className="line">*/}
-                {/*                </div>*/}
-                {/*                <span className="bold-text_new">The Coupé version of the 911 embodies Porsche DNA in*/}
-                {/*                        its purest form: the long, flat bonnet, the steeply inclined windscreen. And the*/}
-                {/*                        roof line that slopes gently down towards the rear, already characterized the*/}
-                {/*                        original 911.</span>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
 
                 <CarGallery car_slug={car_id}/>
             </section>

@@ -28,7 +28,6 @@ const CarGallery = ({car_slug}) => {
 
     return (
         <section>
-            <div>
                 <p className="gallery">Gallery</p>
                 <div className="container_gallery">
                     <div className="box_1">
@@ -46,7 +45,6 @@ const CarGallery = ({car_slug}) => {
                         ))}
                     </div>
                 </div>
-            </div>
         </section>
     )
 }
