@@ -1,11 +1,14 @@
-from typing import List
+from typing import List, Optional
 
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload, subqueryload
 
-from app.models import Car, CarSpecs, BodySpecs, MotorSpecs, PerformanceSpecs
+from app import schemas
+from app.models import Car, CarSpecs, BodySpecs, MotorSpecs, PerformanceSpecs, Highlight
 from app.models.car_category import CarCategory
+from app.models.gallery import CarGallery
 from app.repo.repo import SQLAlchemyRepo
+from app.schemas import HighlightRead
 from app.schemas.body_specs import BodySpecsRead
 from app.schemas.car import CarExtendedRead
 from app.schemas.car_category import CarCategoryRead
@@ -55,7 +58,8 @@ class CarRepo(SQLAlchemyRepo):
             .options(
                 selectinload(
                     Car.car_specs
-                )
+                ),
+
             )
             .where(
                 Car.slug == car_slug
@@ -116,3 +120,33 @@ class CarRepo(SQLAlchemyRepo):
         )
         car_specs = query.scalar()
         return PerformanceSpecsRead.model_validate(car_specs) if car_specs else None
+
+    async def get_car_highlights(self, car_slug: str) -> HighlightRead | None:
+        query = await self.session.execute(
+            select(
+                Highlight
+            )
+            .join(
+                Car
+            )
+            .where(
+                Car.slug == car_slug
+            )
+        )
+        result = query.unique().scalars().all()
+        return list(map(Highlight.to_dto, result)) if result else None
+
+    async def get_car_gallery(self, car_slug: str) -> Optional[List[schemas.CarGalleryRead]]:
+        query = await self.session.execute(
+            select(
+                CarGallery
+            )
+            .join(
+                Car
+            )
+            .where(
+                Car.slug == car_slug
+            )
+        )
+        result = query.unique().scalars().all()
+        return list(map(CarGallery.to_dto, result)) if result else None

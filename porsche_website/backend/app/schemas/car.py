@@ -18,6 +18,8 @@ class CarUpdate(CarCreate):
 class CarRead(CarCreate):
     id: int
     car_category_id: int
+    specs_page_photo: Optional[str] = None
+    overview_photo: Optional[str] = None
 
     model_config = ConfigDict(from_attributes=True)
 

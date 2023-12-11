@@ -6,5 +6,7 @@ from .car import Car
 from .car_category import CarCategory
 from .car_model import CarModel
 from .car_specs import CarSpecs
+from .highlight import Highlight
 from .motor_specs import MotorSpecs
 from .performance_specs import PerformanceSpecs
+from .gallery import CarGallery
