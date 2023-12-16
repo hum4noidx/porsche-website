@@ -181,15 +181,7 @@ h2 {
     margin-top: 12px;
 }
 
-.models {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: wrap;
-    align-content: flex-start;
-    margin-top: 12px;
-    margin-left: 60px;
-    margin-right: 0;
-}
+
 
 .model {
     flex-basis: 23%;
@@ -302,7 +294,6 @@ h2 {
     font-weight: bold;
     font-size: 24px;
 }
-
 
 .gallery {
     font-weight: bold;

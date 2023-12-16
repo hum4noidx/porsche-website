@@ -1,18 +1,20 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import styles from "./CarList.module.css";
+
 
 const SmallCar = ({car, category}) => {
     return (
-        <div className="model">
+        <div className={styles.model}>
             <Link to={`/models/${category}/${car.slug}`}>
                 <img src={`/assets/cars/${car.slug}.webp`} alt={car.slug}/>
             </Link>
-            <div className="model_name">
+            <p>
                 {car.name}
-            </div>
-            <div className="car_price">
+            </p>
+            <p>
                 From $ {(car.price / 1000).toFixed(3).toString().replace(".", ",")}
-            </div>
+            </p>
         </div>
     )
 }

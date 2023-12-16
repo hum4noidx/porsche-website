@@ -3,7 +3,7 @@ import MainPage from "./pages/mainPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {useState} from "react";
 
-import ModelsPage from "./pages/modelOverviewPage";
+import ModelsPage from "./pages/ModelOverview/modelOverviewPage";
 import ModelPage from "./pages/modelPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
