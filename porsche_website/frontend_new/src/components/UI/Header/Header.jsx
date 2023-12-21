@@ -7,7 +7,8 @@ const Header = ({toggleSidebar, color}) => {
         <div className="Container">
             <header className={styles.header}>
                 <button onClick={toggleSidebar}>
-                    <svg className={styles.header_menu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%"
+                    <svg className={styles.header_menu} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                         width="100%"
                          height="100%">
                         <path fill={color} d="M3 6h18v1H3zm0 10h18v1H3zm0-5h18v1H3z"/>
                     </svg>

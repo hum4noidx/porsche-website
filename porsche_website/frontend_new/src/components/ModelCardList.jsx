@@ -8,10 +8,8 @@ const ModelCategoryList = ({toggleSidebar}) => {
 
     const [fetchingCars, isCardsLoading, cardsError] = useFetching(async () => {
         let response = await CarService.get_categories();
-        console.log(response)
         setCarsCategories(response)
     });
-    console.log(categories)
     useEffect(() => {
         fetchingCars().catch(e => console.log(e))
     }, []);

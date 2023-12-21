@@ -1,0 +1,50 @@
+.detail_card {
+    display: flex;
+}
+
+.detail_name {
+    width: 25em;
+    /*width: 400px;*/
+    padding: 4px 84px 4px 16px;
+    color: #818181;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.detail_value {
+    width: 9em;
+    /*width: 170px;*/
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.per {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 565px) {
+    .detail_card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail_name {
+        width: 100%;
+        padding: 4px 84px 4px 0;
+        color: #818181;
+        font-size: 0.9em;
+        font-weight: normal;
+    }
+
+    .detail_value {
+        width: 100%;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .per {
+        margin-left: 0;
+    }
+}
