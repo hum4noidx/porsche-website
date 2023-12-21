@@ -8,8 +8,7 @@ from starlette.responses import FileResponse
 
 from app.api import api_router
 from app.core.config import settings
-from app.deps.users import fastapi_users, jwt_authentication
-from app.schemas.user import UserCreate, UserRead, UserUpdate
+from app.deps.users import fastapi_users
 
 
 def create_app():
@@ -19,7 +18,8 @@ def create_app():
         openapi_url=f"{settings.API_PATH}/openapi.json",
         docs_url="/docs/",
         description=description,
-        redoc_url=None,
+        redoc_url="/redoc/",
+        version="0.1.0",
     )
     setup_routers(app, fastapi_users)
     setup_cors_middleware(app)
@@ -29,27 +29,6 @@ def create_app():
 
 def setup_routers(app: FastAPI, fastapi_users: FastAPIUsers) -> None:
     app.include_router(api_router, prefix=settings.API_PATH)
-    app.include_router(
-        fastapi_users.get_auth_router(
-            jwt_authentication,
-            requires_verification=False,
-        ),
-        prefix=f"{settings.API_PATH}/auth/jwt",
-        tags=["auth"],
-    )
-    app.include_router(
-        fastapi_users.get_register_router(UserRead, UserCreate),
-        prefix=f"{settings.API_PATH}/auth",
-        tags=["auth"],
-    )
-    app.include_router(
-        fastapi_users.get_users_router(
-            UserRead, UserUpdate, requires_verification=False
-        ),
-        prefix=f"{settings.API_PATH}/users",
-        tags=["users"],
-    )
-    # The following operation needs to be at the end of this function
     use_route_names_as_operation_ids(app)
 
 
