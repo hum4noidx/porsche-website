@@ -1,0 +1,20 @@
+.footer {
+    font-size: 18px;
+    padding: 18px 18px 32px 32px;
+    font-family: "Porsche Next", sans-serif;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.footer p {
+    margin-bottom: 0 !important;
+}
+
+.footer h3 {
+    padding: 6px 0 6px 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #FFFFFF;
+}

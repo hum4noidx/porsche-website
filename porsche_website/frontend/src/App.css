@@ -1,0 +1,438 @@
+@font-face {
+    font-family: Porsche Next;
+    src: url(../src/assets/porsche-next-bold.otf) format("otf"),
+    url(../src/assets/PorscheNext-Regular.otf) format("otf"),
+    url(../src/assets/porsche-next-italic.otf) format("otf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1440px;
+    max-height: 710px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.Main-text {
+    width: 600px;
+    margin-top: 13em;
+}
+
+.Main-text-title {
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: 33px;
+    margin-left: 160px;
+    font-size: 4.7em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 180.027px */
+    font-family: "Porsche Next", sans-serif;
+}
+
+.fs-2 {
+    margin-left: 60px;
+}
+
+.model-categories {
+    width: 280px;
+    /*height: 920px;*/
+    flex-shrink: 0;
+    padding: 0 80px 0 0;
+}
+
+.model img {
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.category_car {
+    margin-bottom: 5px;
+    object-fit: scale-down;
+}
+
+.close-btn {
+    margin-top: 36px;
+    margin-left: 374px;
+    width: 48px;
+    height: 48px;
+    /*filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);*/
+    text-decoration: none;
+    color: #818181;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    /*background: linear-gradient(90deg, #D4D4D4 0%, rgba(234, 234, 234, 0.85) 36.46%, rgba(242, 242, 242, 0.53) 100%);*/
+    background: #EEEFF2;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-y: hidden;
+}
+
+/* The navigation menu links */
+.sidenav div a {
+    padding: 3px 3px 3px 3px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav div img:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .close-btn {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    font-size: 36px;
+    margin-left: 0;
+    margin-top: auto;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.Section-main {
+    height: 110vh;
+    background-image: url("https://images-porsche.imgix.net/-/media/C0E40AED1AFA4032B81264466DEC6BBC_F7855B451368485FAF8EA90922143D24_EP21Q2DPE0001-taycan-turbo-s-charging?w=1800&q=45&crop=faces%2Centropy%2Cedges&auto=format");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Section-models {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.Section_model {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.Header-models {
+    overflow: hidden;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    grid-template-areas: "left center right";
+    width: 100%;
+    background-color: #FFFFFF;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Porsche Next", sans-serif;
+    margin-left: 60px;
+    margin-top: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Porsche Next", sans-serif;
+    /*margin-left: 372px;*/
+    margin-top: 12px;
+}
+
+
+
+.model {
+    flex-basis: 23%;
+}
+
+.Section_model {
+    height: 110vh;
+    background-color: #FFFFFF;
+}
+
+.specs_section {
+    background: rgba(0, 0, 0, 0.9);
+    padding-bottom: 50px;
+    color: white;
+
+}
+
+.m-364-background-image {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: auto;
+    min-height: none;
+    width: 100%;
+    transform: translate3d(0, -50%, 0);
+    object-fit: cover
+}
+
+.car_model {
+    padding: 10px 0 0 0;
+}
+
+.car_img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.car_name {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.car_model_price {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+
+.car_inf {
+    font-family: "Porsche Next", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.car_height {
+    margin-top: -590px;
+    margin-left: 790px;
+}
+
+.car_height_dim {
+    margin-left: 790px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_width {
+    margin-top: -63px;
+    margin-left: 1150px;
+}
+
+.car_width_dim {
+    margin-left: 1150px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_wheelbase {
+    margin-top: 480px;
+    margin-left: 750px;
+}
+
+.car_wheelbase_dim {
+    margin-left: 750px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.car_length {
+    margin-top: -64px;
+    margin-left: 1230px;
+}
+
+.car_length_dim {
+    margin-left: 1230px;
+    font-family: "Porsche Next", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.gallery {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    margin-left: 52px;
+}
+
+.container_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.box_1 {
+    max-width: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.box_1 .gitem {
+    flex-basis: 50%;
+    height: 33.333333%;
+}
+
+.box_1 .gitem_2 {
+    flex-basis: 50%;
+    height: 33.333333%;
+}
+
+.box_1 .gitem:last-of-type {
+    flex-basis: 100%;
+    height: 66.666666%;
+}
+
+.box_1 .gitem_2:first-of-type {
+    flex-basis: 100%;
+    height: 66.666666%;
+}
+
+@media screen and (max-width: 1000px) {
+    .models {
+        width: 40%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Header-menu {
+        float: left;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Header-logo {
+        display: block;
+        margin-top: 14px;
+        max-width: 240px;
+        max-height: 16px;
+    }
+
+    .Header-search {
+        float: right;
+        cursor: pointer;
+        margin-right: 8px;
+        margin-top: 8px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .Container {
+        width: 100%;
+        max-width: 768px;
+        max-height: 710px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .Main-text {
+        width: auto;
+        /*margin-left: 4.6%;*/
+        /*margin-top: 14.8%;*/
+        /*margin-top: 30em;*/
+    }
+
+    .Main-text-title {
+        color: #FFFFFF;
+        text-align: left;
+        margin-left: 0;
+        font-size: 2.5em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 180.027px */
+        font-family: "Porsche Next", sans-serif;
+    }
+
+    .model-categories {
+        width: 280px;
+        /*height: 920px;*/
+        flex-shrink: 0;
+        padding: 0 80px 0 0;
+    }
+
+    .category_car {
+        margin-bottom: 5px;
+        object-fit: scale-down;
+    }
+
+    .close-btn {
+        margin-top: 36px;
+        margin-left: 374px;
+        width: 48px;
+        height: 48px;
+        filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+    }
+}

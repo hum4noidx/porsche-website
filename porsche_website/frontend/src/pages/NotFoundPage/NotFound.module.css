@@ -1,0 +1,36 @@
+.not_found_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222020;
+    color: #ff0000;
+}
+
+.not_found_page a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: 1em;
+
+}
+
+.not_found_page h1 {
+    font-size: 8em;
+    margin: 0;
+}
+
+.not_found_page p {
+    font-size: 3em;
+}
+
+@media (max-width: 600px) {
+    .not_found_page h1 {
+        font-size: 6em;
+    }
+
+    .not_found_page p {
+        font-size: 2em;
+    }
+}
